@@ -1,0 +1,262 @@
+// makes
+@import '//scdn.primus.netdna-cdn.com/latest/css/SourceCodePro/stylesheet.css'; //font
+@import 'http://localhost:63342/ModuleBU/latest/css/topcoat-mobile-light';   // cntrls
+@import 'http://localhost:63342/ModuleBU/latest/css/grid';                   // grid
+
+
+////////////////////////////////////////
+//resets:
+//paul irish
+*{box-sizing: border-box;}
+
+////////////////////////////////////////
+
+//@page-header-nav-height:  4.375rem;
+@brand-primary:     #ec514e;
+@hilite:            #0380e8;
+
+// theme:
+@background1:      #e5e9e8;
+@color1:           #0b0b0b;
+@backgroundR1:     #454545;
+@colorR1:          #e5e9e8;
+
+@background2:      #F4F4F4;
+@color2:           #191919;
+
+@color3:           #a4a4a4;
+@color4:           #747474;
+
+@radius:           .2rem;
+
+
+.sideNav { //left nav
+  background: #4A4D4E;
+  position: fixed;
+  z-index: 10;
+  height: 100%;
+  width:400px;
+  left:-407px;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+/////////////////////////////////////////////////////
+// standard
+html, body{
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+
+body {
+  font-family: source-sans-pro;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.1rem;
+}
+
+//////////////////////////////////////////
+//fixes to frameworks
+
+.navigation-bar__item, .topcoat-navigation-bar__item {
+  overflow:visible ;
+}
+
+
+.topcoat-navigation-bar li, .topcoat-navigation-bar li a {
+  display: inline;
+}
+.topcoat-button--cta{
+  margin-top:   .5rem;
+}
+
+
+
+///////////////////////////////////////////
+//layout:
+
+// page-container
+// page-header-nav
+//side-nav
+// page-main
+// konatiner
+// views
+// footer
+
+#page-container {
+  top: 0px ;
+  left:0px;
+  position: fixed;
+  width: 100%;
+}
+
+#page-header-nav{
+  color: @color2;
+  width: 100%;
+  top: 0px ;
+  left:0px;
+  position: absolute ;
+}
+
+#side-nav {
+  background: transparent;
+  width: 100%;
+  left: -100%;
+  height: 100%;
+}
+
+#page-main { // main
+  width: 100%;
+  position: relative ;
+  //top: @page-header-nav-height;
+  overflow-x: hidden;
+  width: 100%;
+  left: 0px;
+  background: @background2;
+  color: @color2;
+}
+
+#kontainer { // inside content for view inserts
+  position: relative ;
+}
+
+.views { //gets loaded inside the #kontainer
+  width: 100%;
+  padding: 1rem;
+}
+
+#footer {
+  position:fixed;
+  bottom:0px;
+  width:100%;
+}
+
+
+////////////////////////////////////////////////
+//details:
+
+.bold {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 4rem;
+}
+
+.pad {
+  padding: 1rem;
+}
+
+.mid {
+  vertical-align: middle;
+  line-height: 2rem;
+}
+
+.hide {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}
+
+///////////////////////////////////////////////////
+//components:
+a, a:link, a:visited {
+  text-decoration: none;
+}
+button .but .topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  color: @color2;
+  display: block;
+  height: 2rem;
+  font-size: 1.2rem;
+  padding: 1rem 0 0 1rem;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+pre {
+  font-family: source-code-pro;
+  margin:0;
+  padding:0;
+}
+
+
+//// table
+table {
+  border-width: 1px;
+  border-collapse: collapse;
+}
+table th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+}
+table td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+}
+
+
+//// form
+form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  max-width: 41rem;
+
+}
+.line {
+  display: block;
+  float: left;
+  width: 30rem;
+  margin-bottom: .3rem;
+}
+label {
+  float: left;
+  display: block;
+  width: 6em;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 3rem;
+}
+
+input, .textInput {
+  float: right;
+  width: 23rem;
+  font-size: 1rem;
+  height: 3rem;
+}
+
+.tabIn {
+  margin-left: 7rem;
+}
+
+.border {
+  border:2px solid black;
+  padding-top: .4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+  min-height: 20rem;
+}

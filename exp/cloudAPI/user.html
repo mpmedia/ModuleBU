@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+Open javascript console:<p/>
+    <button id='butF'>FB Auth</button>
+    <button id='butG'>Gog Auth</button>
+<script src='//scdn-primus.netdna-ssl.com/cloudAPI.js'></script>
+<script>
+cAPI = new CloudAPI()
+
+var butF = document.getElementById('butF')
+butF.addEventListener('click',function() {
+    cAPI.userGetFb(null,onFbBack)// first arg is fb app id from http://developers.facebook.com/apps and set domain (ex: localhost)
+})
+function onFbBack(ret) {//callback
+    console.log(JSON.stringify(ret))
+}
+
+var butG = document.getElementById('butG')
+butG.addEventListener('click',function() {
+    cAPI.userGetGog(null, null, onGBack)// get client id (oauth) and app id from google  http://code.google.com/apis/console and set domain (ex: localhost)
+})
+function onGBack(ret) {
+    console.log(JSON.stringify(ret))
+}
+
+
+
+</script>
+</body>
+</html>
