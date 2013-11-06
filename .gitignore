@@ -1,0 +1,8 @@
+.xml
+*.xml
+.idea/
+*.iml
+
+.DS_Store
+
+*.css
