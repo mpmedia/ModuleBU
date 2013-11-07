@@ -10,7 +10,7 @@ function startApp() {
 
     //set up route/hash/ctrl
     AppBU.route(this.onRoute.bind(this))
-    AppBU.initPosSignal().add(onScroll)
+    AppBU.initPosSignal().add(onScroll) // look bu, no classes, just util functions
     AppBU.initMouseSignal().add(onMouse)
     // just for now
     ModuleMA.domAdd('AboutPg.html',kontainer)
@@ -25,26 +25,24 @@ function onScroll(cv) {
 
 function onRoute(hash) {
     console.log(hash)
-    ModuleMA.domRem(kontainer,0)
+    ModuleMA.domRem(kontainer,0) //#6
     ModuleMA.domAdd('HomePg.html',kontainer, onLoadedBindTemplate)
 }
 
 function onLoadedBindTemplate() {
-    var rows = [ //fake data that you get via HTML5 CORS
+    var rows = [ //fake data that you should get via HTML5 CORS
          { name: 'Jonny', city:'Stockholm' }
         ,{ name: 'Jonas', city:'Berlin' }
     ]
 
-    //transparency
+    //transparency.js
     Transparency.render(document.getElementById('binding'), rows);
-    // end transparency
 
 }
 
 function onMouse(mx,my) {
     console.log(mx,my)
 }
-
 
 /* side bar
 var navFlag:boolean = false

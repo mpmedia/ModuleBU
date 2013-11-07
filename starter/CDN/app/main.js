@@ -7,12 +7,12 @@ require([
     '//scdn-primus.netdna-ssl.com/latest/Signal.js',
     '//scdn-primus.netdna-ssl.com/cloudAPI.js',
     '//scdn-primus.netdna-ssl.com/latest/more/transparency.min.js',
+
     'CDN/app/Mgr.js'
 ], function () {
-    console.log('required loaded, start up:');
+    console.log('require loaded, start up:');
     startApp();
 });
 
 //global, I know
 var kontainer = document.getElementById('kontainer');
-//# sourceMappingURL=main.js.map

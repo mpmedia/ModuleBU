@@ -12,7 +12,7 @@ require([
     ,'CDN/app/Mgr.js'
   ]
   , function() {
-        console.log('required loaded, start up:')
+        console.log('require loaded, start up:')
         startApp()
 })
 

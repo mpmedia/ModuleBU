@@ -30,9 +30,8 @@ function onLoadedBindTemplate() {
         { name: 'Jonas', city: 'Berlin' }
     ];
 
-    //transparency
+    //transparency.js
     Transparency.render(document.getElementById('binding'), rows);
-    // end transparency
 }
 
 function onMouse(mx, my) {
