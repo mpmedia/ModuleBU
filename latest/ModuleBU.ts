@@ -88,6 +88,15 @@ class ModuleMA {
         return (elTop<cv.bot)
     }
 
+    static collides (a, b):boolean{
+        return !(
+            ((a.y + a.height) < (b.y)) ||
+                (a.y > (b.y + b.height)) ||
+                ((a.x + a.width) < b.x) ||
+                (a.x > (b.x + b.width))
+            )
+    }
+
     static showSpinner(status){
         if (status)
             document.body.style.cursor = 'wait';
@@ -137,7 +146,6 @@ class AppBU { // term of affection, usually applied to a significant other
      */
     static initPosSignal() {
         AppBU.posSignal = new Signal();
-
         window.onscroll= AppBU.debounce(function() {
                 AppBU.posSignal.dispatch(ModuleMA.getCVInfo())
             },50)
@@ -186,6 +194,8 @@ class AppBU { // term of affection, usually applied to a significant other
             func(id)
         })
     }
+
+
 
 }
 

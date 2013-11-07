@@ -83,6 +83,10 @@ var ModuleMA = (function () {
         return (elTop < cv.bot);
     };
 
+    ModuleMA.collides = function (a, b) {
+        return !(((a.y + a.height) < (b.y)) || (a.y > (b.y + b.height)) || ((a.x + a.width) < b.x) || (a.x > (b.x + b.width)));
+    };
+
     ModuleMA.showSpinner = function (status) {
         if (status)
             document.body.style.cursor = 'wait';
@@ -128,7 +132,6 @@ var AppBU = (function () {
     */
     function () {
         AppBU.posSignal = new Signal();
-
         window.onscroll = AppBU.debounce(function () {
             AppBU.posSignal.dispatch(ModuleMA.getCVInfo());
         }, 50);
