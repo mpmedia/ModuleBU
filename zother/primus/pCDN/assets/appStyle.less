@@ -2,7 +2,6 @@
 @import 'http://localhost:63342/ModuleBU/latest/css/topcoat-mobile-light';
 @import 'http://localhost:63342/ModuleBU/latest/css/grid';
 
-
 ////////////////////////////////////////
 //resets:
 //paul irish
@@ -29,13 +28,6 @@
 
 @radius:           .2rem;
 
-header { // mobile
-  position: fixed ;
-  top:0;
-  width: 100%;
-  height: auto;
-  z-index: 1000;
-}
 
 /////////////////////////////////////////////////////
 
@@ -69,8 +61,16 @@ body {
 //  views
 // footer
 
+header, #header { // mobile
+  position: fixed ;
+  top:0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+}
 
-#side-nav {
+
+#side_nav {
   width: 100%;
   left:  100%;
   height: 100%;

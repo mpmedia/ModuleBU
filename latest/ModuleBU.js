@@ -93,6 +93,9 @@ var ModuleMA = (function () {
 else
             document.body.style.cursor = 'default';
     };
+    ModuleMA.kontainer = document.getElementById('kontainer');
+    ModuleMA.header = document.getElementById('header');
+    ModuleMA.side_nav = document.getElementById('side_nav');
     return ModuleMA;
 })();
 

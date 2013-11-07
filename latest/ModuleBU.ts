@@ -14,6 +14,10 @@ declare var Signal:any;//observer class
  * Module presenter(View Manager) state MAchine:ModuleMA
  */
 class ModuleMA {
+    static kontainer = document.getElementById('kontainer')
+    static header  =  document.getElementById('header')
+    static side_nav  =  document.getElementById('side_nav')
+
     /**
      * Pages directory
      */
