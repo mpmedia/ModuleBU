@@ -6,7 +6,7 @@ It needs Signals if you use scroll only
 
 App Event Bus to SM Module Presenter *util*
 */
-console.log('ModuleBU v1.1102 utils');
+console.log('ModuleBU v1.1105 utils');
 
 /**
 * Module presenter(View Manager) state MAchine:ModuleMA
@@ -180,7 +180,6 @@ var AppBU = (function () {
             });
         } catch (e) {
             console.log(id + ' not found');
-            console.log(e);
         }
     };
     return AppBU;

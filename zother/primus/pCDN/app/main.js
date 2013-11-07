@@ -2,7 +2,7 @@ document.body.style.cursor = 'wait';
 
 // loader code ///////////////////////////////
 require([
-    'http://localhost:63342/blueGrass/latest/ModuleBU.js',
+    'http://localhost:63342/ModuleBU/latest/ModuleBU.js',
     '//scdn-primus.netdna-ssl.com/latest/Signal.js',
     '//scdn-primus.netdna-ssl.com/latest/TweenLite.min.js',
     '//scdn-primus.netdna-ssl.com/latest/CSSPlugin.min.js',

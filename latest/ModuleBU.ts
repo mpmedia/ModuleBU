@@ -6,7 +6,7 @@
 
  App Event Bus to SM Module Presenter *util*
 */
-console.log('ModuleBU v1.1102 utils')
+console.log('ModuleBU v1.1105 utils')
 
 declare var Signal:any;//observer class
 
@@ -189,14 +189,13 @@ class AppBU { // term of affection, usually applied to a significant other
      */
     static onClick(id:string,func:Function) {
         try{
-        var but = document.getElementById(id)
-        but.addEventListener('click',function(evt) {
-            evt.preventDefault()
-            func(id)
-        })
+            var but = document.getElementById(id)
+            but.addEventListener('click',function(evt) {
+                evt.preventDefault()
+                func(id)
+            })
         } catch (e) {
             console.log(id + ' not found')
-            console.log(e)
         }
     }
 
