@@ -3,6 +3,24 @@ declare var TweenLite;
 declare var App;
 declare var kontainer;
 
+
+class Service {
+    private any:any;
+    constructor(any_:any) {
+        this.any = any_;
+        any_.hashSignal.add(this.onView, this)
+    }
+    private transition():any {
+        ModuleMA.domAdd('Service.html',kontainer)
+    }
+
+    private onView(view:string){
+        if('service'==view)
+            this.transition()
+    }//()
+}
+
+
 class Tut {
     private any:any;
     constructor(any_:any) {
@@ -52,9 +70,7 @@ class About {
     private transition():any {
         ModuleMA.domAdd('About.html',kontainer)
     }
-    onLoaded() {
 
-    }
     private onView(view:string){
         if('about'==view)
             this.transition()

@@ -12,6 +12,7 @@ class App {
         this.hashSignal = new Signal()//will signal to view managers.
 
         //create view managers
+        new Service(this)
         new About(this)
         new Tut(this)
         new Vid(this)
@@ -24,7 +25,7 @@ class App {
     private onRoute() {
         var view = AppBU.getRoute();
         if (null==view|| 'undefined' == view || ''==view || ' ' ==view)
-            view ='#about' // set default
+            view ='#service' // set default
         view = view.slice(1)
         console.log(view)
         this.hashSignal.dispatch(view)

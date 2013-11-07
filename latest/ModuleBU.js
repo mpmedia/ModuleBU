@@ -172,11 +172,16 @@ var AppBU = (function () {
     * @param func
     */
     function (id, func) {
-        var but = document.getElementById(id);
-        but.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            func(id);
-        });
+        try  {
+            var but = document.getElementById(id);
+            but.addEventListener('click', function (evt) {
+                evt.preventDefault();
+                func(id);
+            });
+        } catch (e) {
+            console.log(id + ' not found');
+            console.log(e);
+        }
     };
     return AppBU;
 })();

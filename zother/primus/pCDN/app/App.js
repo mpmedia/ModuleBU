@@ -6,6 +6,7 @@ var App = (function () {
         this.hashSignal = new Signal();
 
         //create view managers
+        new Service(this);
         new About(this);
         new Tut(this);
         new Vid(this);
@@ -17,7 +18,7 @@ var App = (function () {
     App.prototype.onRoute = function () {
         var view = AppBU.getRoute();
         if (null == view || 'undefined' == view || '' == view || ' ' == view)
-            view = '#about';
+            view = '#service';
         view = view.slice(1);
         console.log(view);
         this.hashSignal.dispatch(view);

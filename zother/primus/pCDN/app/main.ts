@@ -4,7 +4,7 @@ declare var App;
 
 // loader code ///////////////////////////////
 require([
-     '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js'
+     'http://localhost:63342/blueGrass/latest/ModuleBU.js'
     ,'//scdn-primus.netdna-ssl.com/latest/Signal.js'
     ,'//scdn-primus.netdna-ssl.com/latest/TweenLite.min.js'
     ,'//scdn-primus.netdna-ssl.com/latest/CSSPlugin.min.js'

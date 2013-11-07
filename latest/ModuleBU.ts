@@ -188,11 +188,16 @@ class AppBU { // term of affection, usually applied to a significant other
      * @param func
      */
     static onClick(id:string,func:Function) {
+        try{
         var but = document.getElementById(id)
         but.addEventListener('click',function(evt) {
             evt.preventDefault()
             func(id)
         })
+        } catch (e) {
+            console.log(id + ' not found')
+            console.log(e)
+        }
     }
 
 

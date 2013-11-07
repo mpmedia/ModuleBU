@@ -1,3 +1,19 @@
+var Service = (function () {
+    function Service(any_) {
+        this.any = any_;
+        any_.hashSignal.add(this.onView, this);
+    }
+    Service.prototype.transition = function () {
+        ModuleMA.domAdd('Service.html', kontainer);
+    };
+
+    Service.prototype.onView = function (view) {
+        if ('service' == view)
+            this.transition();
+    };
+    return Service;
+})();
+
 var Tut = (function () {
     function Tut(any_) {
         this.any = any_;
@@ -45,8 +61,7 @@ var About = (function () {
     About.prototype.transition = function () {
         ModuleMA.domAdd('About.html', kontainer);
     };
-    About.prototype.onLoaded = function () {
-    };
+
     About.prototype.onView = function (view) {
         if ('about' == view)
             this.transition();
