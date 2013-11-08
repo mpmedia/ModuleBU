@@ -2,11 +2,11 @@
  (c) http://github.com/puppetMaster3/ModuleBU
  requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModuleBU
 
- It needs Signals if you use scroll only
+ It may need Signals observer pattern if you use the bus.
 
- App Event Bus to SM Module Presenter *util*
+ App Event Bus to DOM Module  *util*
 */
-console.log('ModuleBU v1.1105 utils')
+console.log('ModuleBU v1.1105a utils')
 
 declare var Signal:any;//observer class
 
@@ -16,7 +16,6 @@ declare var Signal:any;//observer class
 class ModuleMA {
     static kontainer = document.getElementById('kontainer')
     static header    = document.getElementById('header')
-    static side_nav  = document.getElementById('side_nav')
 
     /**
      * Pages directory
@@ -61,24 +60,33 @@ class ModuleMA {
         }
     }
 
-     /**
+    /**
+     * Curent view
+     */
+    static cv:any = new Object()
+    
+    /**
+     * Curent mouse
+     */
+    static mouse:any = new Object()
+
+    /**
       * Returns some containers viewport info
       * @returns {Object}
       */
      static getCVInfo() {
-         var cv:any = new Object()
          //cv.pixR = window.devicePixelRatio
 
-         cv.H = window.innerHeight
+        ModuleMA.cv.H = window.innerHeight
          //cv.cH = document.documentElement.clientHeight
-         cv.W = window.innerWidth
+        ModuleMA.cv.W = window.innerWidth
          //cv.cW = document.documentElement.clientWidth
 
-         cv.sT = document.body.scrollTop
-         cv.bot = cv.sT +  cv.H // bottom
+        ModuleMA.cv.sT = document.body.scrollTop
+        ModuleMA.cv.bot = ModuleMA.cv.sT +  ModuleMA.cv.H // bottom
 
-         cv.pY = window.pageYOffset
-         return cv
+        ModuleMA.cv.pY = window.pageYOffset
+         return ModuleMA.cv
      }
 
     /**
@@ -107,6 +115,8 @@ class ModuleMA {
         else
             document.body.style.cursor = 'default';
     }
+
+
 
 
 }//class
@@ -180,9 +190,10 @@ class AppBU { // term of affection, usually applied to a significant other
     static initMouseSignal() {
         AppBU.mouseSignal=new Signal()
         document.onmousemove = AppBU.debounce(function(evt) {
-                var mX =  evt.clientX
-                var mY =  evt.clientY
-                AppBU.mouseSignal.dispatch(mX, mY)
+                ModuleMA.mouse.x =  evt.clientX
+                ModuleMA.mouse.y =  evt.clientY
+
+                AppBU.mouseSignal.dispatch(ModuleMA.mouse)
             },50)
         return AppBU.mouseSignal
     }
@@ -203,7 +214,6 @@ class AppBU { // term of affection, usually applied to a significant other
         }
     }
 
-
 }
 
 
@@ -214,7 +224,6 @@ class OtherUT{
         var re = /\S+@\S+\.\S+/;
         return re.test(email);
     }
-
 
 }
 

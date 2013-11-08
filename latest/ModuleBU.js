@@ -2,11 +2,11 @@
 (c) http://github.com/puppetMaster3/ModuleBU
 requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModuleBU
 
-It needs Signals if you use scroll only
+It may need Signals observer pattern if you use the bus.
 
-App Event Bus to SM Module Presenter *util*
+App Event Bus to DOM Module  *util*
 */
-console.log('ModuleBU v1.1105 utils');
+console.log('ModuleBU v1.1105a utils');
 
 /**
 * Module presenter(View Manager) state MAchine:ModuleMA
@@ -56,20 +56,18 @@ var ModuleMA = (function () {
     * @returns {Object}
     */
     function () {
-        var cv = new Object();
-
         //cv.pixR = window.devicePixelRatio
-        cv.H = window.innerHeight;
+        ModuleMA.cv.H = window.innerHeight;
 
         //cv.cH = document.documentElement.clientHeight
-        cv.W = window.innerWidth;
+        ModuleMA.cv.W = window.innerWidth;
 
         //cv.cW = document.documentElement.clientWidth
-        cv.sT = document.body.scrollTop;
-        cv.bot = cv.sT + cv.H;
+        ModuleMA.cv.sT = document.body.scrollTop;
+        ModuleMA.cv.bot = ModuleMA.cv.sT + ModuleMA.cv.H;
 
-        cv.pY = window.pageYOffset;
-        return cv;
+        ModuleMA.cv.pY = window.pageYOffset;
+        return ModuleMA.cv;
     };
 
     ModuleMA.isInView = /**
@@ -95,7 +93,10 @@ else
     };
     ModuleMA.kontainer = document.getElementById('kontainer');
     ModuleMA.header = document.getElementById('header');
-    ModuleMA.side_nav = document.getElementById('side_nav');
+
+    ModuleMA.cv = new Object();
+
+    ModuleMA.mouse = new Object();
     return ModuleMA;
 })();
 
@@ -163,9 +164,10 @@ var AppBU = (function () {
     AppBU.initMouseSignal = function () {
         AppBU.mouseSignal = new Signal();
         document.onmousemove = AppBU.debounce(function (evt) {
-            var mX = evt.clientX;
-            var mY = evt.clientY;
-            AppBU.mouseSignal.dispatch(mX, mY);
+            ModuleMA.mouse.x = evt.clientX;
+            ModuleMA.mouse.y = evt.clientY;
+
+            AppBU.mouseSignal.dispatch(ModuleMA.mouse);
         }, 50);
         return AppBU.mouseSignal;
     };

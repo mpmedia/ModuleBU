@@ -2,6 +2,7 @@ var Service = (function () {
     function Service(any_) {
         this.any = any_;
         any_.hashSignal.add(this.onView, this);
+        AppBU.initMouseSignal().add(this.onMouse, this);
     }
     Service.prototype.transition = function () {
         ModuleMA.domAdd('Service.html', ModuleMA.kontainer);
@@ -10,6 +11,11 @@ var Service = (function () {
     Service.prototype.onView = function (view) {
         if ('service' == view)
             this.transition();
+    };
+
+    Service.prototype.onMouse = function () {
+        console.log(ModuleMA.cv);
+        console.log(ModuleMA.mouse);
     };
     return Service;
 })();

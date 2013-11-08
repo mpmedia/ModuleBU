@@ -1,13 +1,14 @@
 declare var ModuleMA;
 declare var TweenLite;
 declare var App;
-
+declare var AppBU;
 
 class Service {
     private any:any;
     constructor(any_:any) {
         this.any = any_;
         any_.hashSignal.add(this.onView, this)
+        AppBU.initMouseSignal().add(this.onMouse,this)
     }
     private transition():any {
         ModuleMA.domAdd('Service.html',ModuleMA.kontainer)
@@ -17,8 +18,13 @@ class Service {
         if('service'==view)
             this.transition()
     }//()
-}
 
+    private onMouse() {
+        console.log(ModuleMA.cv)
+        console.log(ModuleMA.mouse)
+    }
+
+}
 
 
 class Vid  {
