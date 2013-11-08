@@ -1,5 +1,6 @@
 declare var ModuleMA;
 declare var AppBU;
+declare var Signal;
 
 
 class App {
