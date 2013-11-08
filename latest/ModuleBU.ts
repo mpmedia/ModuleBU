@@ -21,7 +21,7 @@ class Mod {
     /**
      * Pages directory
      */
-     static ModuleDir:string;
+     static moduleDir:string;
 
     /**
      * Get and Append a child
@@ -42,7 +42,7 @@ class Mod {
         req.onerror = function(e) {
             console.log(e)
         }
-        req.open('get', Mod.ModuleDir + ht)
+        req.open('get', Mod.moduleDir + ht)
         req.send()
     }
 

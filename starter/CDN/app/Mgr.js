@@ -1,6 +1,6 @@
 function startApp() {
     console.log('version 0.001a');
-    Mod.ModuleDir = 'CDN/modules/';
+    Mod.moduleDir = 'CDN/modules/';
 
     //set up route/hash/ctrl
     AppBU.route(onRoute);

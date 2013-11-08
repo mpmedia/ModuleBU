@@ -34,7 +34,7 @@ var Mod = (function () {
         req.onerror = function (e) {
             console.log(e);
         };
-        req.open('get', Mod.ModuleDir + ht);
+        req.open('get', Mod.moduleDir + ht);
         req.send();
     };
 

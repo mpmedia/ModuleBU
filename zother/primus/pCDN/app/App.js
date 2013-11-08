@@ -1,6 +1,6 @@
 var App = (function () {
     function App() {
-        Mod.ModuleDir = 'pCDN/modules/';
+        Mod.moduleDir = 'pCDN/modules/';
         console.log('0.2');
 
         this.hashSignal = new Signal();
