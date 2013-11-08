@@ -27,17 +27,17 @@ Recipe:
 - Now you should set where you modules are:
 
 ```
-    ModuleMA.moduleDir = 'CDN/modules/'
+    Module.moduleDir = 'CDN/modules/'
 ```
 - And load a module:
 
 ```
-    ModuleMA.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
+    Module.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
 ```
 - Or remove modules:
 
 ```
-    ModuleMA.domRem(document.getDocumentById('container'),0)
+    Module.domRem(document.getDocumentById('container'),0)
 ```
 - Since you loaded the module, you can animate it, for example w/ #GSAP.
 

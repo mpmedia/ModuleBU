@@ -2,18 +2,19 @@
  (c) http://github.com/puppetMaster3/ModuleBU
  requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModuleBU
 
+ 'bu' =term of affection as applied to a significant other.
  It may need Signals observer pattern if you use the bus.
 
  App Event Bus to DOM Module  *util*
 */
-console.log('ModuleBU v1.1105a utils')
+console.log('ModuleBU v1.1105b utils')
 
 declare var Signal:any;//observer class
 
 /**
- * Module presenter(View Manager) state MAchine:ModuleMA
+ * Module presenter(View Manager) state MAchine:Module
  */
-class ModuleMA {
+class Module {
     static kontainer = document.getElementById('kontainer')
     static header    = document.getElementById('header')
 
@@ -29,19 +30,19 @@ class ModuleMA {
      * @param cb_ return random #, not used. But could be for GUID
      */
     static domAdd(ht:string, apDom, cb_?):void {
-        ModuleMA.showSpinner(true)
+        Module.showSpinner(true)
         var req = new XMLHttpRequest()
         req.onload = function() {
             console.log('loaded ' + ht)
             apDom.innerHTML += req.response
-            ModuleMA.showSpinner(false)
+            Module.showSpinner(false)
             if(cb_)
                 cb_(Math.floor(Math.random() * 9999999)) //GUID 1 in 10mm
         }
         req.onerror = function(e) {
             console.log(e)
         }
-        req.open('get', ModuleMA.moduleDir + ht)
+        req.open('get', Module.moduleDir + ht)
         req.send()
     }
 
@@ -77,16 +78,16 @@ class ModuleMA {
      static getCVInfo() {
          //cv.pixR = window.devicePixelRatio
 
-        ModuleMA.cv.H = window.innerHeight
+        Module.cv.H = window.innerHeight
          //cv.cH = document.documentElement.clientHeight
-        ModuleMA.cv.W = window.innerWidth
+        Module.cv.W = window.innerWidth
          //cv.cW = document.documentElement.clientWidth
 
-        ModuleMA.cv.sT = document.body.scrollTop
-        ModuleMA.cv.bot = ModuleMA.cv.sT +  ModuleMA.cv.H // bottom
+        Module.cv.sT = document.body.scrollTop
+        Module.cv.bot = Module.cv.sT +  Module.cv.H // bottom
 
-        ModuleMA.cv.pY = window.pageYOffset
-        return ModuleMA.cv
+        Module.cv.pY = window.pageYOffset
+        return Module.cv
      }
 
     /**
@@ -125,7 +126,7 @@ class ModuleMA {
 /**
  * BUs:AppBU
  */
-class AppBU { // term of affection, usually applied to a significant other
+class AppBU {
     static _cb:any;
 
     static route(cb) {
@@ -161,10 +162,10 @@ class AppBU { // term of affection, usually applied to a significant other
     static initPosSignal() {
         AppBU.posSignal = new Signal();
         window.onscroll= AppBU.debounce(function() {
-                AppBU.posSignal.dispatch(ModuleMA.getCVInfo())
+                AppBU.posSignal.dispatch(Module.getCVInfo())
             },50)
         window.onresize = AppBU.debounce(function() {
-                AppBU.posSignal.dispatch(ModuleMA.getCVInfo())
+                AppBU.posSignal.dispatch(Module.getCVInfo())
             },50)
         return AppBU.posSignal
     }//()
@@ -188,12 +189,13 @@ class AppBU { // term of affection, usually applied to a significant other
     ////// mouse WIP
     static mouseSignal:any;
     static initMouseSignal() {
+        Module.getCVInfo()// make sure it gets called once
         AppBU.mouseSignal=new Signal()
         document.onmousemove = AppBU.debounce(function(evt) {
-                ModuleMA.mouse.x =  evt.clientX
-                ModuleMA.mouse.y =  evt.clientY
+                Module.mouse.x =  evt.clientX
+                Module.mouse.y =  evt.clientY
 
-                AppBU.mouseSignal.dispatch(ModuleMA.mouse)
+                AppBU.mouseSignal.dispatch(Module.mouse)
             },50)
         return AppBU.mouseSignal
     }
