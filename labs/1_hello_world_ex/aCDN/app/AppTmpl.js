@@ -51,7 +51,7 @@ var Templ = (function () {
 
 var App = (function () {
     function App() {
-        moduleDir = 'modules/';
+        ModDir = 'Mods/';
         console.log('v0.06');
         cors = new CloudAPI('fiasqrx5mli');
 

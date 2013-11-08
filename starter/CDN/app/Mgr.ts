@@ -1,32 +1,32 @@
 declare var kontainer;
 declare var TweenLite;
-declare var Module;
+declare var Mod;
 declare var AppBU;
 declare var Transparency;// biding
 
 function startApp() {
     console.log('version 0.001a')
-    Module.moduleDir = 'CDN/modules/'
+    Mod.ModuleDir = 'CDN/modules/'
 
     //set up route/hash/ctrl
     AppBU.route(onRoute)
     AppBU.initPosSignal().add(onScroll) // look bu, no classes, just util functions
     AppBU.initMouseSignal().add(onMouse)
     // just for now
-    Module.domAdd('AboutPg.html',kontainer)
+    Mod.domAdd('AboutPg.html',kontainer)
 }
 
 function onScroll(cv) {
     console.log(cv)
     var el = document.getElementById('someItem')
-    var vis:boolean=Module.isInView(el.getBoundingClientRect(), cv)
+    var vis:boolean=Mod.isInView(el.getBoundingClientRect(), cv)
     console.log(vis)
 }
 
 function onRoute(hash) {
     console.log(hash)
-    Module.domRem(kontainer,0) //#6
-    Module.domAdd('HomePg.html',kontainer, onLoadedBindTemplate)
+    Mod.domRem(kontainer,0) //#6
+    Mod.domAdd('HomePg.html',kontainer, onLoadedBindTemplate)
 }
 
 function onLoadedBindTemplate() {

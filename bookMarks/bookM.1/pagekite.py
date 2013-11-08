@@ -244,9 +244,9 @@ lIXdcyb0KfFGK0OWLLNfYgSejYCSbg18IWF1eljUxiahYZpKFe9F184ayh7SlOeWQ+fRXXMhE0lI7KS
 elC/ZI/t/goipwUogyKFbxo6eKac3yok55B2kQHvGNC4I8ZFN9Z4pEmFRDcNX6VcLzW4r44B+4u3von
 AZh7grcjxqiheqQYulj5FdkJ/plNUfZo4vqArTpu8PBcujcb/BnYhbGE=
 """))
-sys.modules["sockschain"] = imp.new_module("sockschain")
-sys.modules["sockschain"].open = __comb_open
-exec __FILES[".SELF/sockschain/__init__.py"] in sys.modules["sockschain"].__dict__
+sys.Mods["sockschain"] = imp.new_Mod("sockschain")
+sys.Mods["sockschain"].open = __comb_open
+exec __FILES[".SELF/sockschain/__init__.py"] in sys.Mods["sockschain"].__dict__
 
 
 ###############################################################################
@@ -261,9 +261,9 @@ h4li7TfDeAL9J8lWw2YvGUIcY6zvJ0vl3GGdbbbP20SSJgQ3RWHAr777pW5wdyJEoKUmnPnnf8nJ7Jd
 IlGHomftSB1ZC6JgrvqvZb/1RZSW1OfbXLCtY7Ml1YwNkzgidvnexNCezednk6nqDZdZF091RcJP/0p
 uOHF+GP/pj+4Zhjw
 """))
-sys.modules["pagekite"] = imp.new_module("pagekite")
-sys.modules["pagekite"].open = __comb_open
-exec __FILES[".SELF/pagekite/__init__.py"] in sys.modules["pagekite"].__dict__
+sys.Mods["pagekite"] = imp.new_Mod("pagekite")
+sys.Mods["pagekite"].open = __comb_open
+exec __FILES[".SELF/pagekite/__init__.py"] in sys.Mods["pagekite"].__dict__
 
 
 ###############################################################################
@@ -302,10 +302,10 @@ mKZTha/4hcwXdcaLecyyH3m1JRSjVp4Sj7hAMwjs04gM7l4EoKlCuGOJzznwjOmKwQAx0P80WlA4esD
 xDM4yXMSvGsftvI4dOPTll4WHycE1e/kdyHCTqFluBRnVZjJwnzkosDg5cOwhkSyR9QVjMpo0UqsMq8
 Yn0r65eQ6iFVKX89EKdwUoohNNc0Tam+kul4ssSrjyiDOha2fwPr8Rib
 """))
-sys.modules["pagekite.common"] = imp.new_module("pagekite.common")
-sys.modules["pagekite.common"].open = __comb_open
-sys.modules["pagekite"].common = sys.modules["pagekite.common"]
-exec __FILES[".SELF/pagekite/common.py"] in sys.modules["pagekite.common"].__dict__
+sys.Mods["pagekite.common"] = imp.new_Mod("pagekite.common")
+sys.Mods["pagekite.common"].open = __comb_open
+sys.Mods["pagekite"].common = sys.Mods["pagekite.common"]
+exec __FILES[".SELF/pagekite/common.py"] in sys.Mods["pagekite.common"].__dict__
 
 
 ###############################################################################
@@ -339,10 +339,10 @@ sLJFBI3AulouXe9f0aXD7PQMc5+pLd0dnr+AczZfDgMB9F0dPWPcBZdDvC71/U4O7Tjf7RgpssXDfjw
 aj7olRJHNpo8g3nCVdWjMSttxJ0Is7WvO9susKWHHc0/5OH+/Uv/07djcdH1llhnuYuKr5C3Y77z/h/
 K1d
 """))
-sys.modules["pagekite.compat"] = imp.new_module("pagekite.compat")
-sys.modules["pagekite.compat"].open = __comb_open
-sys.modules["pagekite"].compat = sys.modules["pagekite.compat"]
-exec __FILES[".SELF/pagekite/compat.py"] in sys.modules["pagekite.compat"].__dict__
+sys.Mods["pagekite.compat"] = imp.new_Mod("pagekite.compat")
+sys.Mods["pagekite.compat"].open = __comb_open
+sys.Mods["pagekite"].compat = sys.Mods["pagekite.compat"]
+exec __FILES[".SELF/pagekite/compat.py"] in sys.Mods["pagekite.compat"].__dict__
 
 
 ###############################################################################
@@ -369,10 +369,10 @@ oRVyRluEVd/8ZAor/xRBYsj71FffV5VVWqyC00WbANn6Ukv+Y0BLLfqZINT1MfQ2l3W7eJueblSbvln
 z3Tj67Hn2EazsFruFZB+kWmnokhyOTVIcZo0Drdd5sauit2E/c3WH+f941HkZ+qQ8/XzcfYHpmxb/4i
 jh8=
 """))
-sys.modules["pagekite.logging"] = imp.new_module("pagekite.logging")
-sys.modules["pagekite.logging"].open = __comb_open
-sys.modules["pagekite"].logging = sys.modules["pagekite.logging"]
-exec __FILES[".SELF/pagekite/logging.py"] in sys.modules["pagekite.logging"].__dict__
+sys.Mods["pagekite.logging"] = imp.new_Mod("pagekite.logging")
+sys.Mods["pagekite.logging"].open = __comb_open
+sys.Mods["pagekite"].logging = sys.Mods["pagekite.logging"]
+exec __FILES[".SELF/pagekite/logging.py"] in sys.Mods["pagekite.logging"].__dict__
 
 
 ###############################################################################
@@ -505,10 +505,10 @@ MMn+IZSdl+PfpHh8svR7197pQi9ao1b7Rzx4vUyE6Oj7i/jwX++HPzblx7O4m9I+MyXnh8CUTUGNlYm
 gEYbfT9aKWx+0AoAsFvhmsSBhXizwCDVQFqGaL5jUO83LdeiY/66D+gAPh5Ax3PHqqck13Jqdg6r429
 eocAcOFuhlG6gsjPPSt7tcgCZkt36y/dasqn7XpoZxCJHDwzNtwFrHm97x8/8Bfud4zg==
 """))
-sys.modules["pagekite.manual"] = imp.new_module("pagekite.manual")
-sys.modules["pagekite.manual"].open = __comb_open
-sys.modules["pagekite"].manual = sys.modules["pagekite.manual"]
-exec __FILES[".SELF/pagekite/manual.py"] in sys.modules["pagekite.manual"].__dict__
+sys.Mods["pagekite.manual"] = imp.new_Mod("pagekite.manual")
+sys.Mods["pagekite.manual"].open = __comb_open
+sys.Mods["pagekite"].manual = sys.Mods["pagekite.manual"]
+exec __FILES[".SELF/pagekite/manual.py"] in sys.Mods["pagekite.manual"].__dict__
 
 
 ###############################################################################
@@ -523,10 +523,10 @@ c0z9NlsfvCZ0NreZuOdFFSh04rFmY7TpowROqfs3x6z+fT22yRFbsIPs+K5WyzEfNVjhTrNC+y6XaR5
 lhv8/VqM0uADV2qNSb2z3mtzw/kSFQUpNJcvWLHz+mZTFdc20fiZy1JHZlLouSqes3lX7WF1Ja/RbTJ
 AW95ZL6shrFhDE9cPl/bELqbyeR0OiWN6RPrmom+SPjJ9//xm8Qzp9Yr8w==
 """))
-sys.modules["pagekite.proto"] = imp.new_module("pagekite.proto")
-sys.modules["pagekite.proto"].open = __comb_open
-sys.modules["pagekite"].proto = sys.modules["pagekite.proto"]
-exec __FILES[".SELF/pagekite/proto/__init__.py"] in sys.modules["pagekite.proto"].__dict__
+sys.Mods["pagekite.proto"] = imp.new_Mod("pagekite.proto")
+sys.Mods["pagekite.proto"].open = __comb_open
+sys.Mods["pagekite"].proto = sys.Mods["pagekite.proto"]
+exec __FILES[".SELF/pagekite/proto/__init__.py"] in sys.Mods["pagekite.proto"].__dict__
 
 
 ###############################################################################
@@ -592,10 +592,10 @@ MfAopCz8pZ8YNsxE+D8f8WFH31UqRMkiArQglcqxcit32VlwZL86KP9U8JDpSQNZv8CDJuUf3MSNH6J
 bzLRKFJvd0piL6mqhfExUwMTt6WAZlGb2Ze//meDUFD+HCtfk1UG7XVMsdhzz7PfT3GQ2PPJ6C5u/yO
 F6X8wzgfwBVEg1y
 """))
-sys.modules["pagekite.proto.proto"] = imp.new_module("pagekite.proto.proto")
-sys.modules["pagekite.proto.proto"].open = __comb_open
-sys.modules["pagekite.proto"].proto = sys.modules["pagekite.proto.proto"]
-exec __FILES[".SELF/pagekite/proto/proto.py"] in sys.modules["pagekite.proto.proto"].__dict__
+sys.Mods["pagekite.proto.proto"] = imp.new_Mod("pagekite.proto.proto")
+sys.Mods["pagekite.proto.proto"].open = __comb_open
+sys.Mods["pagekite.proto"].proto = sys.Mods["pagekite.proto.proto"]
+exec __FILES[".SELF/pagekite/proto/proto.py"] in sys.Mods["pagekite.proto.proto"].__dict__
 
 
 ###############################################################################
@@ -640,10 +640,10 @@ fYroJlJhF/IAWYaMrxvFRXkOoI2xYDW0ym1UosShyTz2jRJZ5eqCFmU3LQXFzigEPuvWj9ALapKqgWR
 FXjIrCTmzkirgTG2w1GN/PDt/lPOPCnXHw4gVKBY3FkrMBf3NSM8ansNZ7NW57HBGA/FP5rVaBijMtu
 hjaRRhZ2zkDaPgyTzL/USmU92XLR7yL2R58/XG7derRTzU2P/y7DJD+w9YJupu
 """))
-sys.modules["pagekite.proto.parsers"] = imp.new_module("pagekite.proto.parsers")
-sys.modules["pagekite.proto.parsers"].open = __comb_open
-sys.modules["pagekite.proto"].parsers = sys.modules["pagekite.proto.parsers"]
-exec __FILES[".SELF/pagekite/proto/parsers.py"] in sys.modules["pagekite.proto.parsers"].__dict__
+sys.Mods["pagekite.proto.parsers"] = imp.new_Mod("pagekite.proto.parsers")
+sys.Mods["pagekite.proto.parsers"].open = __comb_open
+sys.Mods["pagekite.proto"].parsers = sys.Mods["pagekite.proto.parsers"]
+exec __FILES[".SELF/pagekite/proto/parsers.py"] in sys.Mods["pagekite.proto.parsers"].__dict__
 
 
 ###############################################################################
@@ -774,10 +774,10 @@ oWpZrc9oTh8FI6EJPn9rzsETJelz77URyvlimxTxV2BVYvh0QgprnmXmFbtbJpWe+lQh0GnlNI+SxNl
 YAk5hqW40xbDLrfxf9tiL3Vgv7VHf2fh1iB6UTrQjtltu4Gg1KhTihybKvO8IlSU28X5qXOTbZyM7N6
 9ZeAo0jzi0zfH4bFc7v/X9Yd3uY=
 """))
-sys.modules["pagekite.proto.selectables"] = imp.new_module("pagekite.proto.selectables")
-sys.modules["pagekite.proto.selectables"].open = __comb_open
-sys.modules["pagekite.proto"].selectables = sys.modules["pagekite.proto.selectables"]
-exec __FILES[".SELF/pagekite/proto/selectables.py"] in sys.modules["pagekite.proto.selectables"].__dict__
+sys.Mods["pagekite.proto.selectables"] = imp.new_Mod("pagekite.proto.selectables")
+sys.Mods["pagekite.proto.selectables"].open = __comb_open
+sys.Mods["pagekite.proto"].selectables = sys.Mods["pagekite.proto.selectables"]
+exec __FILES[".SELF/pagekite/proto/selectables.py"] in sys.Mods["pagekite.proto.selectables"].__dict__
 
 
 ###############################################################################
@@ -826,10 +826,10 @@ EPPeVUggvq46Gh1ddXkMx56KD+Ow1fFoyxcvpS/hc772YIcQ0+EIJgtZ16E5hOvI7jEvEyMrXXSY4jO
 Ko2LS+Wmjoo8JRP3cYeDg7OLwQ/eI6lFWR82CtIbsOFVYGdh1vu9sMOgeFf369vZ2vsWvI6B/VOj63K
 rX86v3iKm6xOKFxbeebwH5fyqecYgF2X8wrLWLIy3TWP+dvlFcP7uXbxv/A7mDPy8=
 """))
-sys.modules["pagekite.proto.filters"] = imp.new_module("pagekite.proto.filters")
-sys.modules["pagekite.proto.filters"].open = __comb_open
-sys.modules["pagekite.proto"].filters = sys.modules["pagekite.proto.filters"]
-exec __FILES[".SELF/pagekite/proto/filters.py"] in sys.modules["pagekite.proto.filters"].__dict__
+sys.Mods["pagekite.proto.filters"] = imp.new_Mod("pagekite.proto.filters")
+sys.Mods["pagekite.proto.filters"].open = __comb_open
+sys.Mods["pagekite.proto"].filters = sys.Mods["pagekite.proto.filters"]
+exec __FILES[".SELF/pagekite/proto/filters.py"] in sys.Mods["pagekite.proto.filters"].__dict__
 
 
 ###############################################################################
@@ -1091,20 +1091,20 @@ SY4SmR+Jj+AV5MFPmWo5xQkb30nkV+XGdM06uMd0BO2VdyWza5b3QNsKMcNlqfm5EMy5to1k6ni1PF2
 0rCrKhtQgMUc1yYvIxNOx2qWvGtFuXv3oJntA9nl4MKoFKSjyyJCG9npzjHlv5Ic/MQStwQPCIoKBIf
 p4GTUFR2lQEFim/q3iNUgrVTW1S/b5sGcBQy5VWXaEPthicypZeuez+XxdQ9Zk=
 """))
-sys.modules["pagekite.proto.conns"] = imp.new_module("pagekite.proto.conns")
-sys.modules["pagekite.proto.conns"].open = __comb_open
-sys.modules["pagekite.proto"].conns = sys.modules["pagekite.proto.conns"]
-exec __FILES[".SELF/pagekite/proto/conns.py"] in sys.modules["pagekite.proto.conns"].__dict__
+sys.Mods["pagekite.proto.conns"] = imp.new_Mod("pagekite.proto.conns")
+sys.Mods["pagekite.proto.conns"].open = __comb_open
+sys.Mods["pagekite.proto"].conns = sys.Mods["pagekite.proto.conns"]
+exec __FILES[".SELF/pagekite/proto/conns.py"] in sys.Mods["pagekite.proto.conns"].__dict__
 
 
 ###############################################################################
 __FILES[".SELF/pagekite/ui/__init__.py"] = zlib.decompress(__b64d("""\
 eNoDAAAAAAE=
 """))
-sys.modules["pagekite.ui"] = imp.new_module("pagekite.ui")
-sys.modules["pagekite.ui"].open = __comb_open
-sys.modules["pagekite"].ui = sys.modules["pagekite.ui"]
-exec __FILES[".SELF/pagekite/ui/__init__.py"] in sys.modules["pagekite.ui"].__dict__
+sys.Mods["pagekite.ui"] = imp.new_Mod("pagekite.ui")
+sys.Mods["pagekite.ui"].open = __comb_open
+sys.Mods["pagekite"].ui = sys.Mods["pagekite.ui"]
+exec __FILES[".SELF/pagekite/ui/__init__.py"] in sys.Mods["pagekite.ui"].__dict__
 
 
 ###############################################################################
@@ -1164,10 +1164,10 @@ QqZh8QTLpRNvWEMZw6KbWie4FGQfI5pjYaBqogjblguORywRKlSWJOGAm6OgCsdynk1Epk4If0hpyjb
 zi6BXsKv4nDGdC2pf12wpyob/oww61tYUtHPUbQFbbIqh8Ha3LzVbIEDPfrVD66hVInocyd30y8+dee
 2Xp9WIdAxEOfweVa820hIiZGZCPQPVD4hKjT+CyAs5Ko=
 """))
-sys.modules["pagekite.ui.nullui"] = imp.new_module("pagekite.ui.nullui")
-sys.modules["pagekite.ui.nullui"].open = __comb_open
-sys.modules["pagekite.ui"].nullui = sys.modules["pagekite.ui.nullui"]
-exec __FILES[".SELF/pagekite/ui/nullui.py"] in sys.modules["pagekite.ui.nullui"].__dict__
+sys.Mods["pagekite.ui.nullui"] = imp.new_Mod("pagekite.ui.nullui")
+sys.Mods["pagekite.ui.nullui"].open = __comb_open
+sys.Mods["pagekite.ui"].nullui = sys.Mods["pagekite.ui.nullui"]
+exec __FILES[".SELF/pagekite/ui/nullui.py"] in sys.Mods["pagekite.ui.nullui"].__dict__
 
 
 ###############################################################################
@@ -1225,10 +1225,10 @@ xI2dVMot4oWW/aYDxk+0tGd/QVqDtO+wDv8/kY1JOPzlX+sxT22B+YI5bI5KpwnszpB85QsydcHF5xQ
 th/vAjf5DFhz12lMUPsjIbDtK5vi9+Jaz8m7E6Kw3CB1xi899PH7NzIWoE9a0h+RyZNR2NGQx347Ilo
 gzqc1JZB8uy9OE+rD5HIq4mPlNyt7zBYyD5orWN1/8BDIsUmg==
 """))
-sys.modules["pagekite.ui.basic"] = imp.new_module("pagekite.ui.basic")
-sys.modules["pagekite.ui.basic"].open = __comb_open
-sys.modules["pagekite.ui"].basic = sys.modules["pagekite.ui.basic"]
-exec __FILES[".SELF/pagekite/ui/basic.py"] in sys.modules["pagekite.ui.basic"].__dict__
+sys.Mods["pagekite.ui.basic"] = imp.new_Mod("pagekite.ui.basic")
+sys.Mods["pagekite.ui.basic"].open = __comb_open
+sys.Mods["pagekite.ui"].basic = sys.Mods["pagekite.ui.basic"]
+exec __FILES[".SELF/pagekite/ui/basic.py"] in sys.Mods["pagekite.ui.basic"].__dict__
 
 
 ###############################################################################
@@ -1301,10 +1301,10 @@ P3a2c7JRYI271LbO9gJSo2PTc9vb8nyxQr0m5M6LGdaNNjzBFkNbMDuDFFEA2QGsBO3KYassr7W2oYO
 9haSUq1EWAWsHYy+fnTbakhWPOiHiPby4rLVxH/bwFFSh3ccZCisU25BKru37nlX9RO4FVhKu6zSKxy
 47+g6Ee9wtrSD37oetUqgU95XlVirPBTILVBwA7SoM2dJytlWfEf8DMzAEpg==
 """))
-sys.modules["pagekite.ui.remote"] = imp.new_module("pagekite.ui.remote")
-sys.modules["pagekite.ui.remote"].open = __comb_open
-sys.modules["pagekite.ui"].remote = sys.modules["pagekite.ui.remote"]
-exec __FILES[".SELF/pagekite/ui/remote.py"] in sys.modules["pagekite.ui.remote"].__dict__
+sys.Mods["pagekite.ui.remote"] = imp.new_Mod("pagekite.ui.remote")
+sys.Mods["pagekite.ui.remote"].open = __comb_open
+sys.Mods["pagekite.ui"].remote = sys.Mods["pagekite.ui.remote"]
+exec __FILES[".SELF/pagekite/ui/remote.py"] in sys.Mods["pagekite.ui.remote"].__dict__
 
 
 ###############################################################################
@@ -1342,10 +1342,10 @@ XP+CgBUe6B6uMfkrtEdymjdpp/tynVHKVgR7+8WcnpNZNZAXoVpzPi52LWN1+tdq6uhlt9XOdPW3cRr
 oSm2BRwBud3tfEjVWVvcuUfmZtcwdtTdWdQbnulZB7GXXJtH+TiU21ySTHq/hkYrNtTdCrfjzw8X7Y7
 3QsObQdhT+1P8Ei/cTdMJFRl1s/kRIZr2sylbSKdrKHtm/em4pGfkWo/wJcQR6x
 """))
-sys.modules["pagekite.yamond"] = imp.new_module("pagekite.yamond")
-sys.modules["pagekite.yamond"].open = __comb_open
-sys.modules["pagekite"].yamond = sys.modules["pagekite.yamond"]
-exec __FILES[".SELF/pagekite/yamond.py"] in sys.modules["pagekite.yamond"].__dict__
+sys.Mods["pagekite.yamond"] = imp.new_Mod("pagekite.yamond")
+sys.Mods["pagekite.yamond"].open = __comb_open
+sys.Mods["pagekite"].yamond = sys.Mods["pagekite.yamond"]
+exec __FILES[".SELF/pagekite/yamond.py"] in sys.Mods["pagekite.yamond"].__dict__
 
 
 ###############################################################################
@@ -1523,10 +1523,10 @@ gGn3b/GaXWjPiM1hgho3obSOkDPvKyI2ZXW3dXFgaH3Gv5prtL5n6bO5VmRsKc2AYKHyItVCXMF4/1n
 d3us2woFvxVG3HHp1oD3gGJjpf6M91WdscbTnrjaV1qOeZNxj9r0JoHYAzL3xsGxb2v3mWiEl5UC0SB
 +VsHrf+B1AIAaw=
 """))
-sys.modules["pagekite.httpd"] = imp.new_module("pagekite.httpd")
-sys.modules["pagekite.httpd"].open = __comb_open
-sys.modules["pagekite"].httpd = sys.modules["pagekite.httpd"]
-exec __FILES[".SELF/pagekite/httpd.py"] in sys.modules["pagekite.httpd"].__dict__
+sys.Mods["pagekite.httpd"] = imp.new_Mod("pagekite.httpd")
+sys.Mods["pagekite.httpd"].open = __comb_open
+sys.Mods["pagekite"].httpd = sys.Mods["pagekite.httpd"]
+exec __FILES[".SELF/pagekite/httpd.py"] in sys.Mods["pagekite.httpd"].__dict__
 
 
 ###############################################################################
@@ -2062,10 +2062,10 @@ hEvWWpJBctRDWkxAx/3AlweU6JfXcIeUSkKvugJw2tRl8mMvqkBCAqBV0797xEFIyrUsvz7dyUAM7HW
 ynu6OCQRQBndlLMoiiSt47duQN01o9eT9LJvIqu4Wk5IqiGupeZh6MEDROzBBmlQbscjylHqL5sdCxc
 ifXhQKio9ZhTrIN/QaMSzquJtdwEauHCdTao9QYz/A6Brp0E=
 """))
-sys.modules["pagekite.pk"] = imp.new_module("pagekite.pk")
-sys.modules["pagekite.pk"].open = __comb_open
-sys.modules["pagekite"].pk = sys.modules["pagekite.pk"]
-exec __FILES[".SELF/pagekite/pk.py"] in sys.modules["pagekite.pk"].__dict__
+sys.Mods["pagekite.pk"] = imp.new_Mod("pagekite.pk")
+sys.Mods["pagekite.pk"].open = __comb_open
+sys.Mods["pagekite"].pk = sys.Mods["pagekite.pk"]
+exec __FILES[".SELF/pagekite/pk.py"] in sys.Mods["pagekite.pk"].__dict__
 
 
 ###############################################################################

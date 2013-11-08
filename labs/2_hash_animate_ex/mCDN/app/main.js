@@ -2,7 +2,7 @@
 require([
     '//scdn-primus.netdna-ssl.com/latest/jquery.js',
     '//scdn-primus.netdna-ssl.com/latest/TweenLite.min.js',
-    '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js',
+    '//scdn-primus.netdna-ssl.com/latest/ModBU.js',
     '//scdn-primus.netdna-ssl.com/latest/CSSPlugin.min.js'
 ], function () {
     console.log('loaded');

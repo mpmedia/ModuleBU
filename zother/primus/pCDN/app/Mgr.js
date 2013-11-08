@@ -5,7 +5,7 @@ var Service = (function () {
         AppBU.initMouseSignal().add(this.onMouse, this);
     }
     Service.prototype.transition = function () {
-        Module.domAdd('Service.html', Module.kontainer);
+        Mod.domAdd('Service.html', Mod.kontainer, this.onLoaded);
     };
 
     Service.prototype.onView = function (view) {
@@ -13,9 +13,13 @@ var Service = (function () {
             this.transition();
     };
 
+    Service.prototype.onLoaded = function () {
+        this.back = document.getElementById('');
+        console.log('loaded');
+    };
+
     Service.prototype.onMouse = function () {
-        console.log(Module.cv);
-        console.log(Module.mouse);
+        console.log(Mod.mouse.par);
     };
     return Service;
 })();
@@ -26,7 +30,7 @@ var Vid = (function () {
         any_.hashSignal.add(this.onView, this);
     }
     Vid.prototype.transition = function () {
-        Module.domAdd('vid.html', Module.kontainer, this.onLoaded);
+        Mod.domAdd('vid.html', Mod.kontainer, this.onLoaded);
     };
     Vid.prototype.onLoaded = function () {
         $('#ytplayer').width($(document).width());

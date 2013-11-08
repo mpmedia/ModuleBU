@@ -52,7 +52,7 @@ class Templ implements IViewMgr {
 class App {
 
     constructor() {
-        moduleDir = 'modules/'
+        ModDir = 'Mods/'
         console.log('v0.06')
         cors = new CloudAPI('fiasqrx5mli')
 

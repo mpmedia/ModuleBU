@@ -1,17 +1,18 @@
-declare var Module;
+declare var Mod;
 declare var TweenLite;
 declare var App;
 declare var AppBU;
 
 class Service {
     private any:any;
+    private back:any;
     constructor(any_:any) {
         this.any = any_;
         any_.hashSignal.add(this.onView, this)
         AppBU.initMouseSignal().add(this.onMouse,this)
     }
     private transition():any {
-        Module.domAdd('Service.html',Module.kontainer)
+        Mod.domAdd('Service.html',Mod.kontainer, this.onLoaded)
     }
 
     private onView(view:string){
@@ -19,9 +20,13 @@ class Service {
             this.transition()
     }//()
 
+    private onLoaded() {
+        this.back = document.getElementById('')
+        console.log('loaded')
+    }
+
     private onMouse() {
-        console.log(Module.cv)
-        console.log(Module.mouse)
+        console.log(Mod.mouse.par)
     }
 
 }
@@ -34,7 +39,7 @@ class Vid  {
         any_.hashSignal.add(this.onView, this)
     }
     private transition():any {
-        Module.domAdd('vid.html',Module.kontainer,this.onLoaded)
+        Mod.domAdd('vid.html',Mod.kontainer,this.onLoaded)
     }
     private onLoaded() {
         $('#ytplayer').width($(document).width())

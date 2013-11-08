@@ -1,6 +1,6 @@
 var App = (function () {
     function App() {
-        Module.moduleDir = 'pCDN/modules/';
+        Mod.ModuleDir = 'pCDN/modules/';
         console.log('0.2');
 
         this.hashSignal = new Signal();
@@ -9,14 +9,14 @@ var App = (function () {
         new Service(this);
 
         this._setupNavDispatching();
-        Module.showSpinner(false);
+        Mod.showSpinner(false);
 
         AppBU.initPosSignal().add(this.onResize.bind(this));
         this.onResize();
     }
     App.prototype.onResize = function () {
-        var rect = Module.header.getBoundingClientRect();
-        Module.kontainer.style.marginTop = rect.bottom + 'px';
+        var rect = Mod.header.getBoundingClientRect();
+        Mod.kontainer.style.marginTop = rect.bottom + 'px';
     };
 
     App.prototype.onRoute = function () {
@@ -26,7 +26,7 @@ var App = (function () {
         view = view.slice(1);
         console.log(view);
         this.hashSignal.dispatch(view);
-        Module.domRem(Module.kontainer, 0);
+        Mod.domRem(Mod.kontainer, 0);
     };
 
     App.prototype._setupNavDispatching = function () {

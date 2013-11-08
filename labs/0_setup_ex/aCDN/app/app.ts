@@ -1,5 +1,5 @@
 console.log('ready 0.1');
-moduleDir = 'modules/';
+ModDir = 'Mods/';
 
 var load1But = document.getElementById('load1')
 load1But.addEventListener('click', onclickone)
@@ -21,7 +21,7 @@ load2But.addEventListener('click', function() {
     })
 })
 
-bG.moduleDir=''
+bG.ModDir=''
 
 bG.domAdd('index.html', document.getElementById('kontainer'), function() {
     console.log('loaded')

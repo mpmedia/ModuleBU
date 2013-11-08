@@ -1,6 +1,6 @@
 function startApp() {
     console.log('version 0.001a');
-    Module.moduleDir = 'CDN/modules/';
+    Mod.ModuleDir = 'CDN/modules/';
 
     //set up route/hash/ctrl
     AppBU.route(onRoute);
@@ -8,20 +8,20 @@ function startApp() {
     AppBU.initMouseSignal().add(onMouse);
 
     // just for now
-    Module.domAdd('AboutPg.html', kontainer);
+    Mod.domAdd('AboutPg.html', kontainer);
 }
 
 function onScroll(cv) {
     console.log(cv);
     var el = document.getElementById('someItem');
-    var vis = Module.isInView(el.getBoundingClientRect(), cv);
+    var vis = Mod.isInView(el.getBoundingClientRect(), cv);
     console.log(vis);
 }
 
 function onRoute(hash) {
     console.log(hash);
-    Module.domRem(kontainer, 0);
-    Module.domAdd('HomePg.html', kontainer, onLoadedBindTemplate);
+    Mod.domRem(kontainer, 0);
+    Mod.domAdd('HomePg.html', kontainer, onLoadedBindTemplate);
 }
 
 function onLoadedBindTemplate() {

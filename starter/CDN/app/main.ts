@@ -2,7 +2,7 @@ document.body.style.cursor = 'wait';
 declare var require;
 declare var startApp;
 require([
-     '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js'  // Module-BUs
+     '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js'  // Mod-BUs
     ,'//scdn-primus.netdna-ssl.com/latest/TweenLite.min.js' // Pro animation
     ,'//scdn-primus.netdna-ssl.com/latest/CSSPlugin.min.js' // CSS animation plug
     ,'//scdn-primus.netdna-ssl.com/latest/Signal.js'        // Observer

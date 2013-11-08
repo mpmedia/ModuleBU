@@ -1,48 +1,48 @@
 /**
- (c) http://github.com/puppetMaster3/ModuleBU
- requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModuleBU
+ (c) http://github.com/puppetMaster3/ModBU
+ requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModBU
 
  'bu' =term of affection as applied to a significant other.
  It may need Signals observer pattern if you use the bus.
 
- App Event Bus to DOM Module  *util*
+ App Event Bus to DOM Mod  *util*
 */
 console.log('ModuleBU v1.1105b utils')
 
 declare var Signal:any;//observer class
 
 /**
- * Module presenter(View Manager) state MAchine:Module
+ * Mod presenter(View Manager) state MAchine:Mod
  */
-class Module {
+class Mod {
     static kontainer = document.getElementById('kontainer')
     static header    = document.getElementById('header')
 
     /**
      * Pages directory
      */
-     static moduleDir:string;
+     static ModuleDir:string;
 
     /**
      * Get and Append a child
-     * @param ht view minus moduleDir root
+     * @param ht view minus ModDir root
      * @param apDom where to append
      * @param cb_ return random #, not used. But could be for GUID
      */
     static domAdd(ht:string, apDom, cb_?):void {
-        Module.showSpinner(true)
+        Mod.showSpinner(true)
         var req = new XMLHttpRequest()
         req.onload = function() {
             console.log('loaded ' + ht)
             apDom.innerHTML += req.response
-            Module.showSpinner(false)
+            Mod.showSpinner(false)
             if(cb_)
                 cb_(Math.floor(Math.random() * 9999999)) //GUID 1 in 10mm
         }
         req.onerror = function(e) {
             console.log(e)
         }
-        req.open('get', Module.moduleDir + ht)
+        req.open('get', Mod.ModuleDir + ht)
         req.send()
     }
 
@@ -78,16 +78,16 @@ class Module {
      static getCVInfo() {
          //cv.pixR = window.devicePixelRatio
 
-        Module.cv.H = window.innerHeight
+        Mod.cv.H = window.innerHeight
          //cv.cH = document.documentElement.clientHeight
-        Module.cv.W = window.innerWidth
+        Mod.cv.W = window.innerWidth
          //cv.cW = document.documentElement.clientWidth
 
-        Module.cv.sT = document.body.scrollTop
-        Module.cv.bot = Module.cv.sT +  Module.cv.H // bottom
+        Mod.cv.sT = document.body.scrollTop
+        Mod.cv.bot = Mod.cv.sT +  Mod.cv.H // bottom
 
-        Module.cv.pY = window.pageYOffset
-        return Module.cv
+        //Mod.cv.pY = window.pageYOffset
+        return Mod.cv
      }
 
     /**
@@ -162,10 +162,10 @@ class AppBU {
     static initPosSignal() {
         AppBU.posSignal = new Signal();
         window.onscroll= AppBU.debounce(function() {
-                AppBU.posSignal.dispatch(Module.getCVInfo())
+                AppBU.posSignal.dispatch(Mod.getCVInfo())
             },50)
         window.onresize = AppBU.debounce(function() {
-                AppBU.posSignal.dispatch(Module.getCVInfo())
+                AppBU.posSignal.dispatch(Mod.getCVInfo())
             },50)
         return AppBU.posSignal
     }//()
@@ -189,13 +189,17 @@ class AppBU {
     ////// mouse WIP
     static mouseSignal:any;
     static initMouseSignal() {
-        Module.getCVInfo()// make sure it gets called once
+        Mod.getCVInfo()// make sure it gets called once
         AppBU.mouseSignal=new Signal()
         document.onmousemove = AppBU.debounce(function(evt) {
-                Module.mouse.x =  evt.clientX
-                Module.mouse.y =  evt.clientY
+                Mod.mouse.x =  evt.clientX
+                Mod.mouse.y =  evt.clientY
 
-                AppBU.mouseSignal.dispatch(Module.mouse)
+                var mid:number=Mod.cv.W/2
+                var m:number = Mod.mouse.x-mid
+                Mod.mouse.par = m/mid
+
+                AppBU.mouseSignal.dispatch(Mod.mouse)
             },50)
         return AppBU.mouseSignal
     }
