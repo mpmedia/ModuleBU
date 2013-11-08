@@ -27,10 +27,13 @@ Recipe:
 - Load the ModuleBU.js.
 - Now you should set where you modules are:
     ModuleMA.moduleDir = 'CDN/modules/'
+    
 - And load a module:
     ModuleMA.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
+
 - Or remove modules:
     ModuleMA.domRem(document.getDocumentById('container'),0)
+
 - Since you loaded the module, you can animate it, for example w/ #GSAP.
 
 -Or/and you can listen to hash/routes:
