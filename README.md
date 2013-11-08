@@ -4,21 +4,21 @@
 
 ModuleBU is a util library and a stack that could help you create stunning & magical UI w/ interactions,
     cross platform, mobile-first, SPA (Single Page Applications) for interactive and creative HTML5.
+It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom modules and event bus, plus PhoneGap support.
+This util lib can help animate a div/section after loading. But the key to ModuleBU is that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
 
 These patterns are under patents and preliminary patents and are licensed under Attribution Assurance License (  http://opensource.org/licenses/AAL )
 So, in your index.html or similar in view source you must indicate that your designs are derived from
 http://github.com/puppetMaster3/ModuleBU to comply w/ our offered license.
-If you can't agree to the license then go away, or maybe write us a large check for a custom license.
 
-It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom modules and event bus, plus PhoneGap support.
+Since you agree to the A.A. license, here you go:
 
-Since you agree to the A.A. license, here you go: http://scdn-primus.netdna-ssl.com/latest/ModuleBU.js
+    http://scdn-primus.netdna-ssl.com/latest/ModuleBU.js
 Yes this is all the functions we have to make patterns work.
 
 Here are example of the type of application you can/should build with this.
 - http://intothearctic.gp by HelloMonday
 - http://www.google.com/nexus
-For example, we can animate a div/section after loading. But the key to ModuleBU is that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
 
 To run examples, you'll need a localhost http server or WebStorm IDE.
 
@@ -53,7 +53,6 @@ Recipe:
 ```
 - or other events, like scroll or mouse.
 
-More in the codes.
+More in the codes, pdf of 'train the trainer folder'.
 
 If you have bugs, issues, just file an ticket here on github.
-If you want, you can follow me on twitter: @puppetMaster3
