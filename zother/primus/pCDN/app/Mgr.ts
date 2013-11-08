@@ -12,7 +12,7 @@ class Service {
         AppBU.initMouseSignal().add(this.onMouse,this)
     }
     private transition():any {
-        Mod.domAdd('Service.html',Mod.kontainer, this.onLoaded)
+        Mod.domAdd('Service.html',Mod.kontainer, this.onLoaded.bind(this))
     }
 
     private onView(view:string){
@@ -21,12 +21,15 @@ class Service {
     }//()
 
     private onLoaded() {
-        this.back = document.getElementById('')
         console.log('loaded')
+        this.back = document.getElementById('service').style
+        console.log(this.back)
     }
 
     private onMouse() {
         console.log(Mod.mouse.par)
+        this.back.backgroundPosition = Mod.mouse.par * 10 +'px'
+
     }
 
 }

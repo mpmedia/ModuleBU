@@ -47,7 +47,7 @@ class App {
             AppBU.goLocation('http://ca_1.primusAPI.com/account')
         })
 
-        this.onRoute()//triger first
+        this.onRoute()//trigger first
     }
 
 

@@ -5,7 +5,7 @@ var Service = (function () {
         AppBU.initMouseSignal().add(this.onMouse, this);
     }
     Service.prototype.transition = function () {
-        Mod.domAdd('Service.html', Mod.kontainer, this.onLoaded);
+        Mod.domAdd('Service.html', Mod.kontainer, this.onLoaded.bind(this));
     };
 
     Service.prototype.onView = function (view) {
@@ -14,12 +14,14 @@ var Service = (function () {
     };
 
     Service.prototype.onLoaded = function () {
-        this.back = document.getElementById('');
         console.log('loaded');
+        this.back = document.getElementById('service').style;
+        console.log(this.back);
     };
 
     Service.prototype.onMouse = function () {
         console.log(Mod.mouse.par);
+        this.back.backgroundPosition = Mod.mouse.par * 10 + 'px';
     };
     return Service;
 })();
