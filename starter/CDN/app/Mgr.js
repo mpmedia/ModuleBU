@@ -3,7 +3,7 @@ function startApp() {
     ModuleMA.moduleDir = 'CDN/modules/';
 
     //set up route/hash/ctrl
-    AppBU.route(this.onRoute.bind(this));
+    AppBU.route(onRoute);
     AppBU.initPosSignal().add(onScroll);
     AppBU.initMouseSignal().add(onMouse);
 

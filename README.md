@@ -7,7 +7,7 @@ ModuleBU is a util library and a stack that could help you create stunning & mag
 
 These patterns are under patents and preliminary patents and are licensed under Attribution Assurance License (  http://opensource.org/licenses/AAL )
 So, in your index.html or similar in view source you must indicate that your designs are derived from
-https://github.com/puppetMaster3/ModuleBUto comply w/ our offered license.
+http://github.com/puppetMaster3/ModuleBU to comply w/ our offered license.
 If you can't agree to the license then go away, or maybe write us a large check for a custom license.
 
 It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom modules and event bus, plus PhoneGap support.
@@ -22,13 +22,30 @@ For example, we can animate a div/section after loading. But the key to ModuleBU
 
 To run examples, you'll need a localhost http server or WebStorm IDE.
 
-After you download, you may want to watch a 10 minute video: http://www.youtube.com/watch?v=YWUGC3wKe14.
-
 Recipe:
 - Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
 - Remove sections(div) and save in 'CDN/views' or similar as modules.
 - Load view using provided domAdd(..) and domRemove(..) methods. On open: animate as needed, using GSAP.
 - Recommend running of CDN
+
+Load the ModuleBU.js.
+Now you should set where you modules are:
+    ModuleMA.moduleDir = 'CDN/modules/'
+and load a module:
+    ModuleMA.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
+or remove modules:
+    ModuleMA.domRem(document.getDocumentById('container'),0)
+Since you loaded the module, you can animate it, for example w/ #GSAP.
+
+Or/and you can listen to hash/routes:
+AppBU.route(onRoute)
+
+function onRoute(hash) {
+    console.log(hash)
+    ....
+or other events, like scroll or mouse.
+
+More in the codes.
 
 
 If you have bugs, issues, just file an ticket here on github.
