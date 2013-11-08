@@ -2,7 +2,6 @@ declare var ModuleMA;
 declare var AppBU;
 declare var Signal;
 
-
 class App {
     hashSignal:any;
 
@@ -19,12 +18,12 @@ class App {
         ModuleMA.showSpinner(false)
 
         AppBU.initPosSignal().add(this.onResize.bind(this)) // look bu, no classes, just util functions
-
+        this.onResize()
     }//()
 
-    private onResize(cv) {
-        console.log(cv);
-        console.log(ModuleMA.header)
+    private onResize() {
+        var rect=ModuleMA.header.getBoundingClientRect()
+        ModuleMA.kontainer.style.marginTop =rect.bottom+'px'
     }
 
     private onRoute() {
@@ -41,10 +40,10 @@ class App {
         AppBU.route(this.onRoute.bind(this))
 
         // off site
-        AppBU.onClick('blogBut', function() {
+        AppBU.onClick('blog', function() {
             AppBU.goLocation('http://primusapi.wordpress.com')
         })
-        AppBU.onClick('login', function() {
+        AppBU.onClick('try', function() {
             AppBU.goLocation('http://ca_1.primusAPI.com/account')
         })
 

@@ -2,7 +2,6 @@
 @import 'http://localhost:63342/ModuleBU/latest/css/topcoat-mobile-light';
 @import 'http://localhost:63342/ModuleBU/latest/css/grid';
 
-
 ////////////////////////////////////////
 //resets:
 //paul irish
@@ -77,17 +76,15 @@ header, #header { // mobile
   height: 100%;
 }
 
-
 #kontainer { // inside content for view inserts
   overflow: hidden;
-  height:100%;
+  min-height:100%;
   width:100%;
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .views { //gets loaded inside the #kontainer
-  width: 100%;
-  padding: 1rem;
+
 }
 
 footer {
@@ -129,6 +126,7 @@ footer {
   top: -9999px;
   height: 1px;
   width: 1px;
+  z-index: -1000;
 }
 
 ///////////////////////////////////////////////////

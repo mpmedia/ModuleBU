@@ -12,10 +12,11 @@ var App = (function () {
         ModuleMA.showSpinner(false);
 
         AppBU.initPosSignal().add(this.onResize.bind(this));
+        this.onResize();
     }
-    App.prototype.onResize = function (cv) {
-        console.log(cv);
-        console.log(ModuleMA.header);
+    App.prototype.onResize = function () {
+        var rect = ModuleMA.header.getBoundingClientRect();
+        ModuleMA.kontainer.style.marginTop = rect.bottom + 'px';
     };
 
     App.prototype.onRoute = function () {
@@ -32,10 +33,10 @@ var App = (function () {
         AppBU.route(this.onRoute.bind(this));
 
         // off site
-        AppBU.onClick('blogBut', function () {
+        AppBU.onClick('blog', function () {
             AppBU.goLocation('http://primusapi.wordpress.com');
         });
-        AppBU.onClick('login', function () {
+        AppBU.onClick('try', function () {
             AppBU.goLocation('http://ca_1.primusAPI.com/account');
         });
 

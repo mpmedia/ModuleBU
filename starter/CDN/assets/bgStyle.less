@@ -1,4 +1,4 @@
-@import 'http://localhost:63342/ModuleBU/latest/css/SourceCodePro/stylesheet';
+@import 'http://localhost:63342/ModuleBU/latest/css/lato/stylesheet';
 @import 'http://localhost:63342/ModuleBU/latest/css/topcoat-mobile-light';
 @import 'http://localhost:63342/ModuleBU/latest/css/grid';
 
@@ -6,9 +6,11 @@
 //resets:
 //paul irish
 *{box-sizing: border-box;}
+
 ////////////////////////////////////////
 
-//@page-header-nav-height:  4.375rem;
+@page-header-nav-height:  4.375rem;
+
 @brand-primary:     #ec514e;
 @hilite:            #0380e8;
 
@@ -27,20 +29,8 @@
 @radius:           .2rem;
 
 
-.sideNav { //left nav
-  background: #4A4D4E;
-  position: fixed;
-  z-index: 10;
-  height: 100%;
-  width:400px;
-  left:-407px;
-  -webkit-border-radius: @radius;
-  border-radius: @radius;
-}
-
-
 /////////////////////////////////////////////////////
-// standard
+
 html, body{
   margin:0;
   padding:0;
@@ -48,90 +38,71 @@ html, body{
 }
 
 body {
-  font-family: source-sans-pro;
+  font-family: "Lato";
   -webkit-font-smoothing: antialiased;
   font-size: 1.1rem;
 }
 
 //////////////////////////////////////////
 //fixes to frameworks
-
-.navigation-bar__item, .topcoat-navigation-bar__item {
-  overflow:visible ;
-}
-
-
 .topcoat-navigation-bar li, .topcoat-navigation-bar li a {
   display: inline;
 }
 .topcoat-button--cta{
-  margin-top:   .5rem;
+  margin-top: .5rem;
 }
-
-
 
 ///////////////////////////////////////////
 //layout:
 
-// page-container
 // page-header-nav
 //side-nav
-// page-main
 // konatiner
-// views
+//  views
 // footer
 
-#page-container {
-  top: 0px ;
-  left:0px;
-  position: fixed;
+header, #header { // mobile
+  position: fixed ;
+  top:0;
   width: 100%;
+  height: auto;
+  z-index: 1000;
 }
 
-#page-header-nav{
-  color: @color2;
-  width: 100%;
-  top: 0px ;
-  left:0px;
-  position: absolute ;
-}
 
-#side-nav {
-  background: transparent;
+#side_nav {
   width: 100%;
-  left: -100%;
+  left:  100%;
   height: 100%;
 }
 
-#page-main { // main
-  width: 100%;
-  position: relative ;
-  //top: @page-header-nav-height;
-  overflow-x: hidden;
-  width: 100%;
-  left: 0px;
-  background: @background2;
-  color: @color2;
-}
-
 #kontainer { // inside content for view inserts
-  position: relative ;
+  overflow: hidden;
+  min-height:100%;
+  width:100%;
+  margin-top: 5rem;
 }
 
 .views { //gets loaded inside the #kontainer
-  width: 100%;
-  padding: 1rem;
+
 }
 
-#footer {
-  position:fixed;
-  bottom:0px;
+footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: @background1;
   width:100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height:1.2rem;
+  font-size: 1.1rem;
 }
 
 
 ////////////////////////////////////////////////
 //details:
+
 
 .bold {
   font-size: 5rem;
@@ -155,6 +126,7 @@ body {
   top: -9999px;
   height: 1px;
   width: 1px;
+  z-index: -1000;
 }
 
 ///////////////////////////////////////////////////
