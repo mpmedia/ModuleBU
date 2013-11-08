@@ -7,12 +7,11 @@ ModuleBU is a util library and a stack that could help you create stunning & mag
 It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom modules and event bus, plus PhoneGap support.
 This util lib can help animate a div/section after loading. But the key to ModuleBU is that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
 
-These patterns are under patents and preliminary patents and are licensed under Attribution Assurance License (  http://opensource.org/licenses/AAL )
-So, in your index.html or similar in view source you must indicate that your designs are derived from
-http://github.com/puppetMaster3/ModuleBU to comply w/ our offered license.
+These patterns are under patents and preliminary patents and are licensed under Attribution Assurance License (  http://opensource.org/licenses/AAL ).
+So, in your index.html or similar in view source you must indicate that your designs are
+"derived from http://github.com/puppetMaster3/ModuleBU " to comply w/ our offered license.
 
-Since you agree to the A.A. license, here you go:
-
+Module BUs is:
     http://scdn-primus.netdna-ssl.com/latest/ModuleBU.js
 Yes this is all the functions we have to make patterns work.
 
