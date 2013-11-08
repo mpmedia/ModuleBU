@@ -64,7 +64,7 @@ class ModuleMA {
      * Curent view
      */
     static cv:any = new Object()
-    
+
     /**
      * Curent mouse
      */
@@ -86,7 +86,7 @@ class ModuleMA {
         ModuleMA.cv.bot = ModuleMA.cv.sT +  ModuleMA.cv.H // bottom
 
         ModuleMA.cv.pY = window.pageYOffset
-         return ModuleMA.cv
+        return ModuleMA.cv
      }
 
     /**
