@@ -22,14 +22,13 @@ class Service {
 
     private onLoaded() {
         console.log('loaded')
-        this.back = document.getElementById('service').style
+        this.back = document.getElementById('service')
         console.log(this.back)
     }
 
     private onMouse() {
         console.log(Mod.mouse.par)
-        this.back.backgroundPosition = Mod.mouse.par * 10 +'px'
-
+        TweenLite.to(this.back,.5, {backgroundPosition: Mod.mouse.par * 5 +'px'})
     }
 
 }
