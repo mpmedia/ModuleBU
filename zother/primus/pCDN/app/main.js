@@ -15,9 +15,6 @@ require([
 });
 
 // loader code END///////////////////////////////
-//global, I know
-var kontainer = document.getElementById('kontainer');
-
 ///////////////// tracking code for stats website
 var sc_project = 9262561;
 var sc_invisible = 1;

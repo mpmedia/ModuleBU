@@ -7,14 +7,17 @@ var App = (function () {
 
         //create view managers
         new Service(this);
-        new About(this);
-        new Tut(this);
-        new Vid(this);
-        new Documentation(this);
 
         this._setupNavDispatching();
         ModuleMA.showSpinner(false);
+
+        AppBU.initPosSignal().add(this.onResize.bind(this));
     }
+    App.prototype.onResize = function (cv) {
+        console.log(cv);
+        console.log(ModuleMA.header);
+    };
+
     App.prototype.onRoute = function () {
         var view = AppBU.getRoute();
         if (null == view || 'undefined' == view || '' == view || ' ' == view)
@@ -22,7 +25,7 @@ var App = (function () {
         view = view.slice(1);
         console.log(view);
         this.hashSignal.dispatch(view);
-        ModuleMA.domRem(kontainer, 0);
+        ModuleMA.domRem(ModuleMA.kontainer, 0);
     };
 
     App.prototype._setupNavDispatching = function () {

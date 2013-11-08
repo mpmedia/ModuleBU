@@ -13,14 +13,18 @@ class App {
 
         //create view managers
         new Service(this)
-        new About(this)
-        new Tut(this)
-        new Vid(this)
-        new Documentation(this)
 
         this._setupNavDispatching()
         ModuleMA.showSpinner(false)
+
+        AppBU.initPosSignal().add(this.onResize.bind(this)) // look bu, no classes, just util functions
+
     }//()
+
+    private onResize(cv) {
+        console.log(cv);
+        console.log(ModuleMA.header)
+    }
 
     private onRoute() {
         var view = AppBU.getRoute();
@@ -29,7 +33,7 @@ class App {
         view = view.slice(1)
         console.log(view)
         this.hashSignal.dispatch(view)
-        ModuleMA.domRem(kontainer,0)
+        ModuleMA.domRem(ModuleMA.kontainer,0)
     }
 
     private _setupNavDispatching() {

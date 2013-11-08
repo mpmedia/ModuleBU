@@ -15,8 +15,8 @@ declare var Signal:any;//observer class
  */
 class ModuleMA {
     static kontainer = document.getElementById('kontainer')
-    static header  =  document.getElementById('header')
-    static side_nav  =  document.getElementById('side_nav')
+    static header    = document.getElementById('header')
+    static side_nav  = document.getElementById('side_nav')
 
     /**
      * Pages directory
@@ -202,7 +202,6 @@ class AppBU { // term of affection, usually applied to a significant other
             console.log(id + ' not found')
         }
     }
-
 
 
 }

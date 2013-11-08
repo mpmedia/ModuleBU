@@ -23,30 +23,25 @@ For example, we can animate a div/section after loading. But the key to ModuleBU
 To run examples, you'll need a localhost http server or WebStorm IDE.
 
 Recipe:
-- Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
-- Remove sections(div) and save in 'CDN/views' or similar as modules.
-- Load view using provided domAdd(..) and domRemove(..) methods. On open: animate as needed, using GSAP.
-- Recommend running of CDN
-
-Load the ModuleBU.js.
-Now you should set where you modules are:
+-Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
+- Load the ModuleBU.js.
+- Now you should set where you modules are:
     ModuleMA.moduleDir = 'CDN/modules/'
-and load a module:
+- And load a module:
     ModuleMA.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
-or remove modules:
+- Or remove modules:
     ModuleMA.domRem(document.getDocumentById('container'),0)
-Since you loaded the module, you can animate it, for example w/ #GSAP.
+- Since you loaded the module, you can animate it, for example w/ #GSAP.
 
-Or/and you can listen to hash/routes:
-AppBU.route(onRoute)
+-Or/and you can listen to hash/routes:
+    AppBU.route(onRoute)
 
-function onRoute(hash) {
-    console.log(hash)
+    function onRoute(hash) {
+        console.log(hash)
     ....
-or other events, like scroll or mouse.
+- or other events, like scroll or mouse.
 
 More in the codes.
-
 
 If you have bugs, issues, just file an ticket here on github.
 If you want, you can follow me on twitter: @puppetMaster3

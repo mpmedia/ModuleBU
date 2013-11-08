@@ -1,7 +1,6 @@
 declare var ModuleMA;
 declare var TweenLite;
 declare var App;
-declare var kontainer;
 
 
 class Service {
@@ -11,7 +10,7 @@ class Service {
         any_.hashSignal.add(this.onView, this)
     }
     private transition():any {
-        ModuleMA.domAdd('Service.html',kontainer)
+        ModuleMA.domAdd('Service.html',ModuleMA.kontainer)
     }
 
     private onView(view:string){
@@ -21,25 +20,6 @@ class Service {
 }
 
 
-class Tut {
-    private any:any;
-    constructor(any_:any) {
-        this.any = any_;
-        any_.hashSignal.add(this.onView, this)
-    }
-    private transition():any {
-        ModuleMA.domAdd('tutorials.html',kontainer,this.onLoaded.bind(this))
-    }
-    private onLoaded(nid) {
-        TweenLite.from('#'+nid, 2
-            ,{css:{rotationY:90, transformOrigin:"100% "}  })
-    }
-
-    private onView(view:string){
-        if('tut'==view)
-            this.transition()
-    }
-}
 
 class Vid  {
     private any:any;
@@ -48,7 +28,7 @@ class Vid  {
         any_.hashSignal.add(this.onView, this)
     }
     private transition():any {
-        ModuleMA.domAdd('vid.html',kontainer,this.onLoaded)
+        ModuleMA.domAdd('vid.html',ModuleMA.kontainer,this.onLoaded)
     }
     private onLoaded() {
         $('#ytplayer').width($(document).width())
@@ -61,34 +41,3 @@ class Vid  {
     }//() 
 }
 
-class About {
-    private any:any;
-    constructor(any_:any) {
-        this.any = any_;
-        any_.hashSignal.add(this.onView, this)
-    }
-    private transition():any {
-        ModuleMA.domAdd('About.html',kontainer)
-    }
-
-    private onView(view:string){
-        if('about'==view)
-            this.transition()
-    }//()
-}
-
-
-class Documentation {
-    private any:any;
-    constructor(any_:any) {
-        this.any = any_;
-        any_.hashSignal.add(this.onView, this)
-    }
-    private transition():any {
-        ModuleMA.domAdd('documentation.html',kontainer)
-    }
-    private onView(view:string){
-        if('docum'==view)
-            this.transition()
-    }
-}
