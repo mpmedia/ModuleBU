@@ -26,26 +26,27 @@ Recipe:
 -Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
 - Load the ModuleBU.js.
 - Now you should set where you modules are:
-
+ ```javascript
     ModuleMA.moduleDir = 'CDN/modules/'
-
+ ```
 - And load a module:
-
+ ```javascript
     ModuleMA.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
-
+ ```
 - Or remove modules:
-
+ ```javascript
     ModuleMA.domRem(document.getDocumentById('container'),0)
-
+ ```
 - Since you loaded the module, you can animate it, for example w/ #GSAP.
 
 -Or/and you can listen to hash/routes:
-
+ ```javascript
     AppBU.route(onRoute)
 
     function onRoute(hash) {
         console.log(hash)
     ....
+ ```
 - or other events, like scroll or mouse.
 
 More in the codes.
