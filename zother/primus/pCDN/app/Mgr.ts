@@ -27,8 +27,8 @@ class Service {
     }
 
     private onMouse() {
-        console.log(Mod.mouse.par)
-        TweenLite.to(this.back,.5, {backgroundPosition: Mod.mouse.par * 5 +'px'})
+       console.log(Mod.mouse.par)
+       TweenLite.to(this.back,.8, {backgroundPosition: Mod.mouse.par * 15 +'px'})
     }
 
 }

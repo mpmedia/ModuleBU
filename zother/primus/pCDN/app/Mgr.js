@@ -21,7 +21,7 @@ var Service = (function () {
 
     Service.prototype.onMouse = function () {
         console.log(Mod.mouse.par);
-        TweenLite.to(this.back, .5, { backgroundPosition: Mod.mouse.par * 5 + 'px' });
+        TweenLite.to(this.back, .8, { backgroundPosition: Mod.mouse.par * 15 + 'px' });
     };
     return Service;
 })();

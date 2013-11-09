@@ -137,35 +137,40 @@ var AppBU = (function () {
     */
     function () {
         AppBU.posSignal = new Signal();
-        window.onscroll = AppBU.debounce(function () {
+        window.onscroll = AppBU.throttle(function () {
             AppBU.posSignal.dispatch(Mod.getCVInfo());
-        }, 50);
-        window.onresize = AppBU.debounce(function () {
+        });
+        window.onresize = AppBU.throttle(function () {
             AppBU.posSignal.dispatch(Mod.getCVInfo());
-        }, 50);
+        });
         return AppBU.posSignal;
     };
 
-    AppBU.debounce = function (func, threshold) {
-        var timeout;
-        return function debounced() {
-            var obj = this, args = arguments;
+    AppBU.throttle = function (fn, threshhold, scope) {
+        threshhold || (threshhold = 150);
+        var last, deferTimer;
+        return function () {
+            var context = scope || this;
 
-            function delayed() {
-                func.apply(obj, args);
-                timeout = null;
+            var now = +new Date(), args = arguments;
+            if (last && now < last + threshhold) {
+                // hold on to it
+                clearTimeout(deferTimer);
+                deferTimer = setTimeout(function () {
+                    last = now;
+                    fn.apply(context, args);
+                }, threshhold);
+            } else {
+                last = now;
+                fn.apply(context, args);
             }
-
-            if (timeout)
-                clearTimeout(timeout);
-            timeout = setTimeout(delayed, threshold);
         };
     };
 
     AppBU.initMouseSignal = function () {
         Mod.getCVInfo();
         AppBU.mouseSignal = new Signal();
-        document.onmousemove = AppBU.debounce(function (evt) {
+        document.onmousemove = AppBU.throttle(function (evt) {
             Mod.mouse.x = evt.clientX;
             Mod.mouse.y = evt.clientY;
 
@@ -174,7 +179,7 @@ var AppBU = (function () {
             Mod.mouse.par = m / mid;
 
             AppBU.mouseSignal.dispatch(Mod.mouse);
-        }, 50);
+        }, 100);
         return AppBU.mouseSignal;
     };
 

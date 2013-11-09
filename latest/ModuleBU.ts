@@ -161,29 +161,36 @@ class AppBU {
      */
     static initPosSignal() {
         AppBU.posSignal = new Signal();
-        window.onscroll= AppBU.debounce(function() {
+        window.onscroll= AppBU.throttle(function() {
                 AppBU.posSignal.dispatch(Mod.getCVInfo())
-            },50)
-        window.onresize = AppBU.debounce(function() {
+            })
+        window.onresize = AppBU.throttle(function() {
                 AppBU.posSignal.dispatch(Mod.getCVInfo())
-            },50)
+            })
         return AppBU.posSignal
     }//()
 
-    static debounce(func, threshold) {
-        var timeout
-        return function debounced () {
-            var obj = this, args = arguments;
+    static throttle(fn, threshhold?, scope?) {//remysharp.com/2010/07/21/throttling-function-calls
+        threshhold || (threshhold = 150);
+        var last,
+            deferTimer;
+        return function () {
+            var context = scope || this;
 
-            function delayed () {
-                func.apply(obj, args)
-                timeout = null
+            var now = +new Date,
+                args = arguments;
+            if (last && now < last + threshhold) {
+                // hold on to it
+                clearTimeout(deferTimer);
+                deferTimer = setTimeout(function () {
+                    last = now;
+                    fn.apply(context, args);
+                }, threshhold);
+            } else {
+                last = now;
+                fn.apply(context, args);
             }
-
-            if (timeout)
-                clearTimeout(timeout)
-            timeout = setTimeout(delayed, threshold )
-        }
+        };
     }
 
     ////// mouse WIP
@@ -191,7 +198,7 @@ class AppBU {
     static initMouseSignal() {
         Mod.getCVInfo()// make sure it gets called once
         AppBU.mouseSignal=new Signal()
-        document.onmousemove = AppBU.debounce(function(evt) {
+        document.onmousemove = AppBU.throttle(function(evt) {
                 Mod.mouse.x =  evt.clientX
                 Mod.mouse.y =  evt.clientY
 
@@ -200,7 +207,7 @@ class AppBU {
                 Mod.mouse.par = m/mid
 
                 AppBU.mouseSignal.dispatch(Mod.mouse)
-            },50)
+            },100)
         return AppBU.mouseSignal
     }
 
