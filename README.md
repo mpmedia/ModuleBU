@@ -1,8 +1,8 @@
 # ModuleBU - 'Hey bu'
 
- The goal is: Make magical UI, no one sees the dirt.
+ The goal is: Creative UI, non goal is: no one sees the dirt.
 
-ModuleBU is a util library and a stack that could help you be creative w/ UI w/ interactions,
+ModuleBU is a util library and a stack that could help you be creative w/ UI interactions,
     cross platform, mobile-first, SPA (Single Page Applications) .
 It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom Mods and event bus, plus PhoneGap support.
 This util lib can help animate a div/section after loading. But the key to ModuleBU is that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
@@ -14,13 +14,14 @@ So, in your index.html or similar in view source you must indicate that your des
 
 Therefore:
     http://scdn-primus.netdna-ssl.com/latest/ModlueBU.js
-Yes this is all the functions we have to make patterns work.
+Yes this is all the functions we have to make these patterns work.
 
 Here are example of the type of application you can/should build with this.
 - http://intothearctic.gp by HelloMonday
 - http://www.google.com/nexus
 
-To run examples, you'll need a localhost http server or WebStorm IDE.
+To run examples, you'll need a localhost http server or WebStorm IDE, since it loads the DOM (Rachet does the same).
+
 
 Recipe:
 -Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
@@ -28,17 +29,17 @@ Recipe:
 - Now you should set where you dom modules are:
 
 ```
-    Mod.ModDir = 'CDN/Mods/'
+    Module.ModuleDir = 'CDN/Mods/'
 ```
 - And load a module:
 
 ```
-    Mod.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
+    Module.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
 ```
 - Or remove Mods:
 
 ```
-    Mod.domRem(document.getDocumentById('container'),0)
+    Module.domRem(document.getDocumentById('container'),0)
 ```
 - Since you loaded the Mod, you can animate it, for example w/ #GSAP.
 
@@ -51,8 +52,10 @@ Recipe:
         console.log(hash)
     ....
 ```
-- or other events, like scroll or mouse.
+- or other events, like scroll or mouse. Yes, it's an Event Bus, that is not the point.
 
-More in the codes, pdf of 'train the trainer folder'.
+More in the codes, pdf of 'train the trainer' folder.
+
+Also, the rest of the recommended stack: #MaxCDN, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as ParseAPI.com, #TopCoat, #PhoneGap, etc.
 
 If you have bugs, issues, just file an ticket here on github.
