@@ -4,9 +4,10 @@ declare var App;
 
 // loader code ///////////////////////////////
 require([
-     '//localhost:63342/ModuleBU/latest/ModuleBU.js' //http://localhost:63342/ModuleBU/
+     '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js' //http://localhost:63342/ModuleBU/
     ,'//scdn-primus.netdna-ssl.com/latest/Signal.js'
     ,'//scdn-primus.netdna-ssl.com/latest/GSAP.min.js'
+    ,'//scdn-primus.netdna-ssl.com/latest/more/parallax.js'
     ,'//scdn-primus.netdna-ssl.com/cloudAPI.js'
     ,'//code.jquery.com/jquery-2.0.3.min.js'
     

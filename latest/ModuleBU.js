@@ -7,7 +7,7 @@ It may need Signals observer pattern if you use the bus.
 
 App Event Bus to DOM Mod  *util*
 */
-console.log('ModuleBU v1.1105b utils');
+console.log('ModuleBU v1.1106 utils');
 
 /**
 * Mod presenter(View Manager) state MAchine:Mod
@@ -176,7 +176,7 @@ var AppBU = (function () {
 
             var mid = Mod.cv.W / 2;
             var m = Mod.mouse.x - mid;
-            Mod.mouse.par = m / mid;
+            Mod.mouse.par = m / mid * -1;
 
             AppBU.mouseSignal.dispatch(Mod.mouse);
         }, 100);

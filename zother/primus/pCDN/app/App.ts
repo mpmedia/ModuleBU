@@ -1,6 +1,7 @@
 declare var Mod;
 declare var AppBU;
 declare var Signal;
+declare var Parallax;
 
 class App {
     hashSignal:any;
@@ -19,6 +20,10 @@ class App {
 
         AppBU.initPosSignal().add(this.onResize.bind(this)) // look bu, no classes, just util functions
         this.onResize()
+
+        //parallax
+        var scene = document.getElementById('outerKontainer')
+        var parallax = new Parallax(scene)
     }//()
 
     private onResize() {

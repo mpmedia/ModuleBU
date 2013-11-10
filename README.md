@@ -1,6 +1,6 @@
-# ModuleBU - 'Hey bu'
+# ModuleBU - 'Hey bu.'
 
- The goal is: Creative UI, non goal is: no one sees the dirt.
+ The goal is: Creative UI, non-goal is: no one sees the dirt.
 
 ModuleBU is a util library and a stack that could help you be creative w/ UI interactions,
     cross platform, mobile-first, SPA (Single Page Applications) .
@@ -25,21 +25,21 @@ To run examples, you'll need a localhost http server or WebStorm IDE, since it l
 
 Recipe:
 -Download the 'starter' folder to get the start structure and edit. Copy 'latest' folder into aCDN/libs.
-- Load the ModBU.js.
+- Load the ModuleBU.js, via script tag or require.js or such.
 - Now you should set where you dom modules are:
 
 ```
-    Module.ModuleDir = 'CDN/Mods/'
+    Mod.moduleDir = 'CDN/Mods/'
 ```
 - And load a module:
 
 ```
-    Module.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
+    Mod.domAdd('HomePg.html',document.getDocumentById('container'), onLoaded)
 ```
 - Or remove Mods:
 
 ```
-    Module.domRem(document.getDocumentById('container'),0)
+    Mod.domRem(document.getDocumentById('container'),0)
 ```
 - Since you loaded the Mod, you can animate it, for example w/ #GSAP.
 
@@ -56,6 +56,6 @@ Recipe:
 
 More in the codes, pdf of 'train the trainer' folder.
 
-Also, the rest of the recommended stack: #MaxCDN, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as ParseAPI.com, #TopCoat, #PhoneGap, etc.
+Also, the rest of the recommended stack: #MaxCDN, #WebStorm, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as PrimusAPI.com, #TopCoat, #PhoneGap, etc.
 
 If you have bugs, issues, just file an ticket here on github.

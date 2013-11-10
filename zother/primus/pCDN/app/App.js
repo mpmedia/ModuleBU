@@ -13,6 +13,10 @@ var App = (function () {
 
         AppBU.initPosSignal().add(this.onResize.bind(this));
         this.onResize();
+
+        //parallax
+        var scene = document.getElementById('outerKontainer');
+        var parallax = new Parallax(scene);
     }
     App.prototype.onResize = function () {
         var rect = Mod.header.getBoundingClientRect();

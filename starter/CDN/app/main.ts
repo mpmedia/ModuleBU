@@ -3,8 +3,8 @@ declare var require;
 declare var startApp;
 require([
      '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js'  // Mod-BUs
-    ,'//scdn-primus.netdna-ssl.com/latest/TweenLite.min.js' // Pro animation
-    ,'//scdn-primus.netdna-ssl.com/latest/CSSPlugin.min.js' // CSS animation plug
+    ,'//scdn-primus.netdna-ssl.com/latest/TweenMax.min.js' // Pro animation
+    ,'//scdn-primus.netdna-ssl.com/latest/more/parallax.js'
     ,'//scdn-primus.netdna-ssl.com/latest/Signal.js'        // Observer
     ,'//scdn-primus.netdna-ssl.com/cloudAPI.js'             // API
 
