@@ -1,28 +1,13 @@
-var AttributeFactory, Checkbox, Element, ElementFactory, Input, Radio, Select, TextArea, VoidElement, helpers, _, _ref, _ref1, _ref2, _ref3, _ref4, __hasProp = {}.hasOwnProperty, __extends = function (child, parent) {
-    for (var key in parent) {
-        if (__hasProp.call(parent, key))
-            child[key] = parent[key];
+var AttributeFactory = (function () {
+    function AttributeFactory(el) {
+        this.el = el;
+        this.attributes = {};
+        this.childNodes = _.toArray(this.el.childNodes);
+        this.nodeName = this.el.nodeName.toLowerCase();
+        this.classNames = this.el.className.split(' ');
+        this.originalAttributes = {};
     }
-    function ctor() {
-        this.constructor = child;
-    }
-    ctor.prototype = parent.prototype;
-    child.prototype = new ctor();
-    child.__super__ = parent.prototype;
-    return child;
-};
-
-_ = require('lodash.js');
-
-helpers = require('./helpers');
-
-AttributeFactory = require('./attributeFactory');
-
-module.exports = ElementFactory = {
-    Elements: {
-        input: {}
-    },
-    createElement: function (el) {
+    AttributeFactory.prototype.createElement = function (el) {
         var El, name;
 
         if ('input' === (name = el.nodeName.toLowerCase())) {
@@ -31,20 +16,9 @@ module.exports = ElementFactory = {
             El = ElementFactory.Elements[name] || Element;
         }
         return new El(el);
-    }
-};
+    };
 
-Element = (function () {
-    function Element(el) {
-        this.el = el;
-        this.attributes = {};
-        this.childNodes = _.toArray(this.el.childNodes);
-        this.nodeName = this.el.nodeName.toLowerCase();
-        this.classNames = this.el.className.split(' ');
-        this.originalAttributes = {};
-    }
-
-    Element.prototype.empty = function () {
+    AttributeFactory.prototype.empty = function () {
         var child;
 
         while (child = this.el.firstChild) {
@@ -53,7 +27,7 @@ Element = (function () {
         return this;
     };
 
-    Element.prototype.reset = function () {
+    AttributeFactory.prototype.reset = function () {
         var attribute, name, _ref, _results;
 
         _ref = this.attributes;
@@ -65,11 +39,11 @@ Element = (function () {
         return _results;
     };
 
-    Element.prototype.render = function (value) {
+    AttributeFactory.prototype.render = function (value) {
         return this.attr('text', value);
     };
 
-    Element.prototype.attr = function (name, value) {
+    AttributeFactory.prototype.attr = function (name, value) {
         var attribute, _base;
 
         attribute = (_base = this.attributes)[name] || (_base[name] = AttributeFactory.createAttribute(this.el, name, value));
@@ -79,7 +53,7 @@ Element = (function () {
         return attribute;
     };
 
-    Element.prototype.renderDirectives = function (model, index, attributes) {
+    AttributeFactory.prototype.renderDirectives = function (model, index, attributes) {
         var directive, name, value, _results;
 
         _results = [];
@@ -103,11 +77,10 @@ Element = (function () {
         }
         return _results;
     };
-
-    return Element;
+    return AttributeFactory;
 })();
 
-Select = (function (_super) {
+classSelect = (function (_super) {
     __extends(Select, _super);
 
     ElementFactory.Elements['select'] = Select;

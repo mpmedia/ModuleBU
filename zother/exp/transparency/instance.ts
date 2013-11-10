@@ -1,19 +1,6 @@
-var Instance, chainable, helpers, _,
-  __hasProp = {}.hasOwnProperty;
+class Instance {
 
-_ = require('lodash.js');
-
-chainable = (helpers = require('./helpers')).chainable;
-
-module.exports = Instance = (function() {
-  function Instance(template, Transparency) {
-    this.Transparency = Transparency;
-    this.queryCache = {};
-    this.childNodes = _.toArray(template.childNodes);
-    this.elements = helpers.getElements(template);
-  }
-
-  Instance.prototype.remove = chainable(function() {
+public remove () {
     var node, _i, _len, _ref, _results;
 
     _ref = this.childNodes;
@@ -23,9 +10,9 @@ module.exports = Instance = (function() {
       _results.push(node.parentNode.removeChild(node));
     }
     return _results;
-  });
+  };
 
-  Instance.prototype.appendTo = chainable(function(parent) {
+public appendTo (function(parent) {
     var node, _i, _len, _ref, _results;
 
     _ref = this.childNodes;
@@ -35,9 +22,9 @@ module.exports = Instance = (function() {
       _results.push(parent.appendChild(node));
     }
     return _results;
-  });
+  }
 
-  Instance.prototype.prepare = chainable(function(model) {
+public  prepare (model) {
     var element, _i, _len, _ref, _results;
 
     _ref = this.elements;
@@ -48,9 +35,9 @@ module.exports = Instance = (function() {
       _results.push(helpers.data(element.el).model = model);
     }
     return _results;
-  });
+  }
 
-  Instance.prototype.renderValues = chainable(function(model, children) {
+public renderValues (model, children) {
     var element, key, value, _results;
 
     if (_.isElement(model) && (element = this.elements[0])) {
@@ -82,9 +69,9 @@ module.exports = Instance = (function() {
       }
       return _results;
     }
-  });
+  }
 
-  Instance.prototype.renderDirectives = chainable(function(model, index, directives) {
+public renderDirectives(model, index, directives) {
     var attributes, element, key, _results;
 
     _results = [];
@@ -112,9 +99,9 @@ module.exports = Instance = (function() {
       }).call(this));
     }
     return _results;
-  });
+  }
 
-  Instance.prototype.renderChildren = chainable(function(model, children, directives, options) {
+public renderChildren (model, children, directives, options) {
     var element, key, _i, _len, _results;
 
     _results = [];
@@ -133,9 +120,9 @@ module.exports = Instance = (function() {
       }).call(this));
     }
     return _results;
-  });
+  }
 
-  Instance.prototype.matchingElements = function(key) {
+public matchingElements (key) {
     var el, elements, _base;
 
     elements = (_base = this.queryCache)[key] || (_base[key] = (function() {
@@ -151,10 +138,9 @@ module.exports = Instance = (function() {
       }
       return _results;
     }).call(this));
-    helpers.log("Matching elements for '" + key + "':", elements);
+    console.log("Matching elements for '" + key + "':", elements);
     return elements;
-  };
+}
 
-  return Instance;
 
-})();
+}

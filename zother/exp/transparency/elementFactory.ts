@@ -1,18 +1,6 @@
-var AttributeFactory, Checkbox, Element, ElementFactory, Input, Radio, Select, TextArea, VoidElement, helpers, _, _ref, _ref1, _ref2, _ref3, _ref4,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+class AttributeFactory {
 
-_ = require('lodash.js');
-
-helpers = require('./helpers');
-
-AttributeFactory = require('./attributeFactory');
-
-module.exports = ElementFactory = {
-  Elements: {
-    input: {}
-  },
-  createElement: function(el) {
+public createElement(el) {
     var El, name;
 
     if ('input' === (name = el.nodeName.toLowerCase())) {
@@ -21,11 +9,16 @@ module.exports = ElementFactory = {
       El = ElementFactory.Elements[name] || Element;
     }
     return new El(el);
-  }
-};
+}
 
-Element = (function() {
-  function Element(el) {
+el;
+attributes;
+childNodes;
+nodeName;
+classNames;
+originalAttributes;
+
+constructor (el) {
     this.el = el;
     this.attributes = {};
     this.childNodes = _.toArray(this.el.childNodes);
@@ -34,16 +27,16 @@ Element = (function() {
     this.originalAttributes = {};
   }
 
-  Element.prototype.empty = function() {
+public empty () {
     var child;
 
     while (child = this.el.firstChild) {
       this.el.removeChild(child);
     }
     return this;
-  };
+  }
 
-  Element.prototype.reset = function() {
+public reset () {
     var attribute, name, _ref, _results;
 
     _ref = this.attributes;
@@ -53,13 +46,13 @@ Element = (function() {
       _results.push(attribute.set(attribute.templateValue));
     }
     return _results;
-  };
+  }
 
-  Element.prototype.render = function(value) {
+  public render (value) {
     return this.attr('text', value);
-  };
+  }
 
-  Element.prototype.attr = function(name, value) {
+  public attr(name, value) {
     var attribute, _base;
 
     attribute = (_base = this.attributes)[name] || (_base[name] = AttributeFactory.createAttribute(this.el, name, value));
@@ -67,9 +60,9 @@ Element = (function() {
       attribute.set(value);
     }
     return attribute;
-  };
+  }
 
-  Element.prototype.renderDirectives = function(model, index, attributes) {
+public renderDirectives (model, index, attributes) {
     var directive, name, value, _results;
 
     _results = [];
@@ -91,23 +84,19 @@ Element = (function() {
       }
     }
     return _results;
-  };
-
-  return Element;
-
-})();
-
-Select = (function(_super) {
-  __extends(Select, _super);
-
-  ElementFactory.Elements['select'] = Select;
-
-  function Select(el) {
-    Select.__super__.constructor.call(this, el);
-    this.elements = helpers.getElements(el);
   }
 
-  Select.prototype.render = function(value) {
+
+
+}
+
+class Select  {
+
+  constructor(el) {
+
+  }
+
+    public render (value) {
     var option, _i, _len, _ref, _results;
 
     value = value.toString();
@@ -122,36 +111,25 @@ Select = (function(_super) {
     return _results;
   };
 
-  return Select;
 
-})(Element);
 
-VoidElement = (function(_super) {
-  var VOID_ELEMENTS, nodeName, _i, _len;
+}
 
-  __extends(VoidElement, _super);
+class VoidElement {
 
-  function VoidElement() {
-    _ref = VoidElement.__super__.constructor.apply(this, arguments);
-    return _ref;
-  }
 
-  VOID_ELEMENTS = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
+VOID_ELEMENTS = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
 
-  for (_i = 0, _len = VOID_ELEMENTS.length; _i < _len; _i++) {
-    nodeName = VOID_ELEMENTS[_i];
-    ElementFactory.Elements[nodeName] = VoidElement;
-  }
-
-  VoidElement.prototype.attr = function(name, value) {
+public attr (name, value) {
     if (name !== 'text' && name !== 'html') {
       return VoidElement.__super__.attr.call(this, name, value);
     }
-  };
+  }
 
-  return VoidElement;
 
-})(Element);
+
+}
+
 
 Input = (function(_super) {
   __extends(Input, _super);

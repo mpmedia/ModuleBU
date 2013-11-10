@@ -1,21 +1,17 @@
-var Context, Instance, after, before, chainable, cloneNode, _ref;
+class Context {
 
-_ref = require('./helpers'), before = _ref.before, after = _ref.after, chainable = _ref.chainable, cloneNode = _ref.cloneNode;
-
-Instance = require('./instance');
-
-module.exports = Context = (function() {
-  var attach, detach;
-
-  detach = chainable(function() {
+public static detach() {//chainable
     this.parent = this.el.parentNode;
+
     if (this.parent) {
       this.nextSibling = this.el.nextSibling;
       return this.parent.removeChild(this.el);
     }
-  });
 
-  attach = chainable(function() {
+    return
+  }
+
+public static attach () {//chainable
     if (this.parent) {
       if (this.nextSibling) {
         return this.parent.insertBefore(this.el, this.nextSibling);
@@ -23,9 +19,16 @@ module.exports = Context = (function() {
         return this.parent.appendChild(this.el);
       }
     }
-  });
 
-  function Context(el, Transparency) {
+    return
+  }
+
+el;
+template;
+instances;
+instanceCache;
+
+constructor(el, Transparency) {
     this.el = el;
     this.Transparency = Transparency;
     this.template = cloneNode(this.el);
@@ -33,7 +36,7 @@ module.exports = Context = (function() {
     this.instanceCache = [];
   }
 
-  Context.prototype.render = before(detach)(after(attach)(chainable(function(models, directives, options) {
+public render(models, directives, options) {// before(detach) (after(attach) (chainable(function
     var children, index, instance, model, _i, _len, _results;
 
     while (models.length < this.instances.length) {
@@ -51,8 +54,6 @@ module.exports = Context = (function() {
       _results.push(instance.prepare(model, children).renderValues(model, children).renderDirectives(model, index, directives).renderChildren(model, children, directives, options));
     }
     return _results;
-  })));
+  }
 
-  return Context;
-
-})();
+}//class
