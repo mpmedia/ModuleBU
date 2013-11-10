@@ -170,7 +170,7 @@ class AppBU {
         return AppBU.posSignal
     }//()
 
-    static throttle(fn, threshhold?, scope?) {//remysharp.com/2010/07/21/throttling-function-calls
+    static throttle(fn, threshhold?, scope?) {//  remysharp.com/2010/07/21/throttling-function-calls
         threshhold || (threshhold = 150);
         var last,
             deferTimer;
