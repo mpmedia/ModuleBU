@@ -35,6 +35,9 @@ class Mod {
         req.onload = function() {
             console.log('loaded ' + ht)
             apDom.innerHTML += req.response
+
+            document.body.offsetHeight; // force reflow to prevent scroll
+
             Mod.showSpinner(false)
             if(cb_)
                 cb_(Math.floor(Math.random() * 9999999)) //GUID 1 in 10mm

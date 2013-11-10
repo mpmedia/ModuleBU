@@ -27,6 +27,9 @@ var Mod = (function () {
         req.onload = function () {
             console.log('loaded ' + ht);
             apDom.innerHTML += req.response;
+
+            document.body.offsetHeight;
+
             Mod.showSpinner(false);
             if (cb_)
                 cb_(Math.floor(Math.random() * 9999999));
