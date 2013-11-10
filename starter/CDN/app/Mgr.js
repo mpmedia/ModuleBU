@@ -34,7 +34,7 @@ function onLoadedBindTemplate() {
     Transparency.render(document.getElementById('binding'), rows);
 }
 
-function onMouse(mx, my) {
-    console.log(mx, my);
+function onMouse(m) {
+    console.log(m);
 }
 //# sourceMappingURL=Mgr.js.map

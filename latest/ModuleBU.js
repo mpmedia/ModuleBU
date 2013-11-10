@@ -1,9 +1,9 @@
 /**
 (c) http://github.com/puppetMaster3/ModBU
-requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModBU
+requires attribution for derivatives or inspired by, as per Attribution Assurance License @ http://github.com/puppetMaster3/ModuleBU
 
-'bu' =term of affection as applied to a significant other.
-It may need Signals observer pattern if you use the bus.
+'bu' =term of affection as applied to the significant other.
+It may need Signals observer pattern lib if you use the bus.
 
 App Event Bus to DOM Mod  *util*
 */

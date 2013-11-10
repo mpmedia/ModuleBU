@@ -1,11 +1,12 @@
-# ModuleBU - 'Hey bu.'
+# ModuleBU - 'Hey bu'
 
- The goal is: Creative UI, non-goal is: no one sees the dirt.
+The goal is: Creative UI, non-goal is: no one sees the dirt.
+ 'bu' =term of affection as applied to the significant other.
 
-ModuleBU is a util library and a stack that could help you be creative w/ UI interactions,
-    cross platform, mobile-first, SPA (Single Page Applications) .
-It is DOM centric(vs .js centric) with easy to teach setup.  Features include: it lets you load dom Mods and event bus, plus PhoneGap support.
-This util lib can help animate a div/section after loading. But the key to ModuleBU is that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
+
+ModuleBU is a library and a stack that helps you be creative w/ UI interactions,
+    cross platform, mobile-first, SPA (Single Page Applications).
+It is DOM centric(vs .js centric) and easy to teach. It appears that it is hard to do nice UI in .js views, here the views are HTML DOM, not .js emitted.
 
 These patterns are licensed under Attribution Assurance License (  http://opensource.org/licenses/AAL ).
 So, in your index.html or similar in view source you must indicate that your designs are
@@ -53,9 +54,11 @@ Recipe:
     ....
 ```
 - or other events, like scroll or mouse. Yes, it's an Event Bus, that is not the point.
+One example is: http://github.com/puppetMaster3/ModuleBU/blob/master/starter/CDN/app/Mgr.js
 
 More in the codes, pdf of 'train the trainer' folder.
 
-Also, the rest of the recommended stack: #MaxCDN, #WebStorm, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as PrimusAPI.com, #TopCoat, #PhoneGap, etc.
+Also, the rest of the recommended stack: #MaxCDN, #WebStorm, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as PrimusAPI.com,
+#Sigals.js observer implementation, #TopCoat, #PhoneGap build, etc.
 
-If you have bugs, issues, just file an ticket here on github.
+If you have bugs, issues, or need help, just file an ticket here on github.
