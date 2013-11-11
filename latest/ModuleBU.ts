@@ -244,4 +244,8 @@ class OtherUT{
 }
 
 
+interface IServiceAPI { //testable
+
+}
+
 

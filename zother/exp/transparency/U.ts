@@ -13,7 +13,6 @@ public static isString(obj) {
         return toString.call(obj) == '[object String]';
 }
 
-
 public static isNumber(obj) {
         return toString.call(obj) == '[object Number]';
 }
