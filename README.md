@@ -1,4 +1,4 @@
-# ModuleBU - 'Hey bu'
+ ModuleBU - 'Hey bu'
 
 The goal is: Creative UI, non-goal is: no one sees the dirt.
  'bu' =term of affection as applied to the significant other.
@@ -42,7 +42,7 @@ Recipe:
 ```
     Mod.domRem(document.getDocumentById('container'),0)
 ```
-- Since you loaded the Mod, you can animate it, for example w/ #GSAP.
+- Since you loaded the Mod, you can animate it, for example w/ GSAP.
 
 -Or/and you can listen to hash/routes:
 
@@ -58,7 +58,7 @@ One example is: http://github.com/puppetMaster3/ModuleBU/blob/master/starter/CDN
 
 More in the codes, pdf of 'train the trainer' folder.
 
-Also, the rest of the recommended stack: #MaxCDN, #WebStorm, #TypeScript, #LESS, #Require.js, #GSAP, BaaS API - such as PrimusAPI.com,
-#Signals.js observer implementation, #TopCoat, #PhoneGap build, #Awwwards, #DigitalOcean, #DynDNS,  etc.
+Also, the rest of the recommended stack: MaxCDN, WebStorm, TypeScript, LESS, Require.js, GSAP, BaaS API - such as PrimusAPI.com,
+Signals.js observer implementation, TopCoat, PhoneGap build, Awwwards, DigitalOcean, DynDNS,  etc.
 
 If you have bugs, issues, or need help, just file an ticket here on github.
