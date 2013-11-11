@@ -14,7 +14,7 @@ So, in your index.html or similar in view source you must indicate that your des
 
 
 Therefore:
-    http://scdn-primus.netdna-ssl.com/latest/ModlueBU.js
+    http://scdn-primus.netdna-ssl.com/latestCDN/ModlueBU.js
 Yes this is all the functions we have to make these patterns work.
 
 Here are example of the type of application you can/should build with this.

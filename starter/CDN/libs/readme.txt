@@ -1,2 +1,2 @@
-copy /latest/* here, at least libs you be using
+copy /latestCDN/* here, at least libs you be using
 

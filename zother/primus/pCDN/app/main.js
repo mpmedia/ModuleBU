@@ -2,10 +2,10 @@ document.body.style.cursor = 'wait';
 
 // loader code ///////////////////////////////
 require([
-    '//scdn-primus.netdna-ssl.com/latest/ModuleBU.js',
-    '//scdn-primus.netdna-ssl.com/latest/Signal.js',
-    '//scdn-primus.netdna-ssl.com/latest/GSAP.min.js',
-    '//scdn-primus.netdna-ssl.com/latest/more/parallax.js',
+    '//scdn-primus.netdna-ssl.com/latestCDN/ModuleBU.js',
+    '//scdn-primus.netdna-ssl.com/latestCDN/Signal.js',
+    '//scdn-primus.netdna-ssl.com/latestCDN/GSAP.min.js',
+    '//scdn-primus.netdna-ssl.com/latestCDN/more/parallax.js',
     '//scdn-primus.netdna-ssl.com/cloudAPI.js',
     '//code.jquery.com/jquery-2.0.3.min.js',
     'pCDN/app/Mgr.js',
