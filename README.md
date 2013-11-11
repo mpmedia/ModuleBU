@@ -1,6 +1,6 @@
  ModuleBU - 'Hey bu'
 
-The goal is: Creative UI, non-goal is: no one sees the dirt.
+The goal is: Creative UI and designer friendly, non-goal is: no one sees the dirt.
  'bu' =term of affection as applied to the significant other.
 
 
@@ -20,6 +20,7 @@ Yes this is all the functions we have to make these patterns work.
 Here are example of the type of application you can/should build with this.
 - http://intothearctic.gp by HelloMonday
 - http://www.google.com/nexus
+- http://mekanism.com
 
 To run examples, you'll need a localhost http server or WebStorm IDE, since it loads the DOM (Rachet does the same).
 
