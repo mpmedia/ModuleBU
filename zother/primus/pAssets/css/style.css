@@ -103,7 +103,9 @@ footer {
     text-shadow:none;    
 }
 .carousel-caption h1 {
-    font-size:5em;
+    font-size:4em;
+    margin-bottom:40px;
+    text-shadow: 1px 1px 1px;
 }
 .carousel-control.right {
     background-image:none;
@@ -141,7 +143,7 @@ a:hover {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (min-width:320px) and (max-width: 768px) {
   .footer-block {
     height:auto;  
     background-position:left bottom;    
@@ -150,19 +152,12 @@ a:hover {
     float:left !important;    
     }   
     .carousel-caption h1 {
-    font-size: 5em;
+    font-size: 2.5em;
     margin-bottom: 0;
 }
 }
 @media (min-width: 768px) {
 
-  /* Remove the edge padding needed for mobile */
-/*
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
-*/
 
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -190,4 +185,10 @@ a:hover {
   .featurette-heading {
     margin-top: 120px;
   }
+}
+@media (min-width:769px) and (max-width: 1060px) {
+  .carousel-caption h1 {
+    font-size:3em;
+    margin-bottom:30px;
+    }
 }
