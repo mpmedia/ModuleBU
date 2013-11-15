@@ -77,6 +77,9 @@ body {
 .marketing h2 {
   font-weight: normal;
 }
+.col-sm-4 .marketing h2:nth-child(3) {
+  margin-bottom:60px;
+}
 .marketing .col-lg-4 p {
   margin-left: 10px;
   margin-right: 10px;
