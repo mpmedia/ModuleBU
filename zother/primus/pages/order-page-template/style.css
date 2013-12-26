@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Segoe-UI-SemiBold';
+    src: url('fonts/segoe-ui-semibold.eot');
+    src: url('fonts/segoe-ui-semibold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/segoe-ui-semibold.woff') format('woff'),
+         url('fonts/segoe-ui-semibold.ttf') format('truetype'),
+         url('fonts/segoe-ui-semibold.svg#Segoe-UI-SemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo300';
+    src: url('fonts/museo300-regular-webfont.eot');
+    src: url('fonts/museo300-regular-webfont.eot?#iefix') format('eot'),
+         url('fonts/museo300-regular-webfont.woff') format('woff'),
+         url('fonts/museo300-regular-webfont.ttf') format('truetype'),
+         url('fonts/museo300-regular-webfont.svg#webfontJA9Sojwh') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Museo500';
+    src: url('fonts/museo500-regular-webfont.eot');
+    src: url('fonts/museo500-regular-webfont.eot?#iefix') format('eot'),
+         url('fonts/museo500-regular-webfont.woff') format('woff'),
+         url('fonts/museo500-regular-webfont.ttf') format('truetype'),
+         url('fonts/museo500-regular-webfont.svg#webfontGF4BwnoR') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe-UI';
+    src: url('fonts/segoe-ui.eot');
+    src: url('fonts/segoe-ui.eot?#iefix') format('embedded-opentype'),
+         url('fonts/segoe-ui.woff') format('woff'),
+         url('fonts/segoe-ui.ttf') format('truetype'),
+         url('fonts/segoe-ui.svg#Segoe-UI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe-UI-Bold';
+    src: url('fonts/segoe-ui-bold.eot');
+    src: url('fonts/segoe-ui-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/segoe-ui-bold.woff') format('woff'),
+         url('fonts/segoe-ui-bold.ttf') format('truetype'),
+         url('fonts/segoe-ui-bold.svg#Segoe-UI-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0; outline: 0; }
+
+body, html { height: 100%; }
+
+body {
+    font-size: 18px;
+    line-height: 26px;
+    font-family: 'Segoe-UI', Georgia, times, serif;
+    color: #555555;
+    background: #fcfcfc url(images/bg.png) repeat;
+    min-width: 861px;
+}
+
+p{
+	margin: 20px;
+	padding: 0;
+	letter-spacing: 0px;
+}
+
+#main{
+	margin: 50px auto 20px auto;
+	width: 861px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+}
+
+.shell{
+	margin: 0 auto;
+	padding: 0;
+	width: 861px;
+}
+
+
+#header-logo{
+	margin: 40px auto;
+	padding: 0;
+	text-indent: -999px;
+	width: 238px;
+	height: 57px;
+	background: url(images/logo.png) 0 0 no-repeat;
+}
+
+#headline{
+	padding: 0 30px 20px 30px;
+}
+
+#headline h1{
+	margin: 0;
+	padding: 10px 0 20px 0;
+	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
+	font-size: 36px;
+	text-align: center;
+	letter-spacing: -1px;
+	line-height: 30px;
+	color: #1082c5;
+}
+
+#headline h2{
+	margin: 0;
+	padding: 10px 0;
+	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
+	font-size: 22px;
+	text-align: left;
+	letter-spacing: -1px;
+	line-height: 30px;
+	color: #555555;
+}
+
+#headline ul{
+	margin: 0px 0 0 0px;
+}
+
+#headline ul li{
+	list-style-type: none;
+	margin: 5px 0;
+	padding-left: 30px;
+	background: url(images/list-button.png) 0 0 no-repeat;
+}
+
+#license{
+	padding: 20px 30px 30px 30px;
+	background-color: #f5f5f5;
+}
+
+#license p{
+	margin: 0;
+}
+
+#terms{
+	margin: 10px auto 0px auto;
+	width: 800px;
+	height: 141px;
+	border: 1px solid #d8d8d8;
+	background-color: #ffffff;
+	font-size: 14px;
+	color: #333333;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#terms p{
+	margin: 10px;
+}
+
+#contact-form{
+	padding: 0 30px;
+}	
+
+#contact-form p.notice{
+	margin: 10px 0;
+	padding: 0;
+	color: #555555;
+	font-size: 14px;
+	font-family: 'Segoe-UI', Georgia, times, serif;
+	font-style: italic;
+}
+
+#contact-form ul{
+	margin: 0px 0 0 10px;
+}
+
+#contact-form ul li{
+	list-style-type: none;
+	margin: 5px 0;
+	padding-left: 0;
+	list-style-image: url(images/list-button2.png);
+	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
+	font-size: 16px;
+	color: #555555;
+}
+
+form{
+	margin: 50px 0 20px 0;
+	padding: 0;
+}
+
+form h3{
+	margin: 30px 0;
+	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
+	font-size: 24px;
+	color: #555555;
+	text-align: center;
+}
+
+.int-holder{ clear: both; width: 100%; margin: 5px 0; padding: 0;}
+.int-holder .label p{ 
+	margin: 0; 
+	padding: 0;
+	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
+	font-size: 18px;
+	color: #777777;
+}
+.int-holder .label{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 200px;
+}
+.int-holder .box{
+	float: left;
+}
+input{
+	width: 333px;
+	height: 24px;
+	border: 1px solid #c8c8c8;
+	text-indent: 5px;
+	font-size: 14px;
+	color: #333333;
+}
+.int-holder .box select{
+	width: 333px;
+	height: 24px;
+	border: 1px solid #c8c8c8;
+}
+.int-holder .box input.streetaddress{width: 500px;}
+.int-holder .box input.city{width: 400px;}
+.int-holder .box input.state{width: 80px;}
+.int-holder .box input.postalcode{width: 180px;}
+.int-holder .box select.country{width: 500px;}
+.couponcode{width: 100px; margin-left: 40px;}
+
+.clear{ clear: both; }
+.right{float: right;}
+.left{float: left;}
+.bar{ clear: both; width: 100%; margin: 5px 0; padding: 0;}
+.bar p.right{ padding-right: 30px; }
+.bar p.left{ padding-left: 30px; }
+div.odd{background-color: #f7f7f7;}
+div.even{background-color: #ffffff;}
+p#coupon{background: url(images/coupon-check.png) right center no-repeat;padding-right: 30px;}
+p.discount{color: #ff5b5b;}
+p.total{color: #589d06;}
+
+input.submit-button{
+	width: 290px;
+	height: 62px;
+	display: block;
+	text-indent: -9999px;
+	padding: 0;
+	margin: 50px auto;
+	color: #f2bc00;
+	background: url(images/submit-button.png) 0 0 no-repeat;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+
+footer p{
+	font-size: 14px;
+	text-align: center;
+	font-family: 'Segoe-UI', Georgia, times, serif;
+	margin: 0px;
+	color: #333333;
+	line-height: 18px;
+}
+
+footer p.legal{ margin: 30px auto; padding-bottom: 10px; }
+
+footer p a{
+	color: #333333;
+	text-decoration: underline;
+}
