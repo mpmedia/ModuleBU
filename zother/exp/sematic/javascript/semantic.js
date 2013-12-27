@@ -3506,7 +3506,7 @@ $.fn.chatroom = function(parameters) {
         html +=  ''
           + '<div class="user" data-id="' + member.id + '">'
           + ' <div class="image">'
-          + '   <img src="' + member.avatarURL + '">'
+          + '   <request-demo src="' + member.avatarURL + '">'
           + ' </div>'
         ;
         if(member.color !== undefined) {
@@ -8422,7 +8422,7 @@ $.fn.search.settings = {
               if(result.image !== undefined) {
                 html+= ''
                   + '<div class="image">'
-                  + ' <img src="' + result.image + '">'
+                  + ' <request-demo src="' + result.image + '">'
                   + '</div>'
                 ;
               }
@@ -8468,7 +8468,7 @@ $.fn.search.settings = {
           if(result.image !== undefined) {
             html+= ''
               + '<div class="image">'
-              + ' <img src="' + result.image + '">'
+              + ' <request-demo src="' + result.image + '">'
               + '</div>'
             ;
           }

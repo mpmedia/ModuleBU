@@ -124,7 +124,7 @@
 
 						if(image.src !== new_source){
 
-							//change img src to basePath + response
+							//change request-demo src to basePath + response
 							image.setAttribute('src', new_source);
 
 						}
