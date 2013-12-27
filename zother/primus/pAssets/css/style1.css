@@ -40,7 +40,7 @@ body {
     line-height: 26px;
     font-family: 'Segoe-UI', Georgia, times, serif;
     color: #555555;
-    background: #fcfcfc url(../../img/request-demo/bg.png) repeat;
+    background: #fcfcfc url(../img/request-demo/bg.png) repeat;
     min-width: 861px;
 }
 
@@ -106,7 +106,7 @@ p{
 	list-style-type: none;
 	margin: 5px 0;
 	padding-left: 30px;
-	background: url(../../img/request-demo/list-button.png) 0 0 no-repeat;
+	background: url(../img/request-demo/list-button.png) 0 0 no-repeat;
 }
 
 #contact-form{
@@ -130,7 +130,7 @@ p{
 	list-style-type: none;
 	margin: 5px 0;
 	padding-left: 0;
-	list-style-image: url(../../img/request-demo/list-button2.png);
+	list-style-image: url(../img/request-demo/list-button2.png);
 	font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
 	font-size: 16px;
 	color: #555555;
@@ -190,7 +190,7 @@ div.odd{background-color: #f7f7f7;}
 div.even{background-color: #ffffff;}
 
 .submit {
-    background: #5094cd url(images/submit-arrow.png) no-repeat 220px 10px;
+    background: #5094cd;
     color:#fff;
     border:1px solid #6ed4ff;
     font-family: 'Segoe-UI-SemiBold', Georgia, times, serif;
