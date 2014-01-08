@@ -153,6 +153,9 @@ a:hover {
     opacity:0.7;
     color:inherit;
 }
+.map {
+    text-align: center;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
