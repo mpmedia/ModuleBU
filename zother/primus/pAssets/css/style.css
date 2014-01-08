@@ -1,20 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 body, h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Lato'; 
+    font-family: 'Lato';
 }
 p {
-    font-size:1.2em;    
+    font-size:1.2em;
 }
 .container {
     width:100%;
     padding-right: 0;
-    padding-left: 0;    
+    padding-left: 0;
 }
 .page-container {
     width:100%;
     max-width:1200px;
-    margin:0 auto;    
+    margin:0 auto;
 }
 .centered {
     width: 85%;
@@ -30,7 +30,7 @@ p {
     text-align: left;
 }
 .navbar-wrapper {
-    margin-top:0;    
+    margin-top:0;
 }
 .navbar-wrapper .navbar {
     border-radius: 0;
@@ -43,13 +43,13 @@ p {
     padding:5px;
 }
 .navbar-brand img {
-    width:300px;    
+    width:300px;
 }
 .slogan {
-    padding-left:20px; 
+    padding-left:20px;
 }
 .navbar-collapse ul li {
-    text-align:center;    
+    text-align:center;
 }
 .navbar-nav {
     font-size: 18px;
@@ -63,26 +63,24 @@ p {
     background-color: #999;
 }
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-color: slategray;
-opacity:0.8;
-background-color: transparent;
+    color: slategray;
+    opacity:0.8;
+    background-color: transparent;
 }
+
 footer {
-    margin-top:200px;
+    /*margin-top:200px;*/
     margin-bottom:100px !important;
     background-color:#999;
-    bottom:100;
+    bottom:100px;
 }
 .footer-block {
     background-color: lightskyblue;
-/*    background-color:#93b7d5;*/
-/*    background:url("/pAssets/request-demo/footer-bg.jpg") 0 0 no-repeat; */
-    background-position:center;
-    width:100%;   
-    padding-top:50px;
-    padding-bottom:100px;
-    padding-left:5%;
-    padding-right:5%;
+    /*background-color:#93b7d5;*/
+    /*background:url("/pAssets/request-demo/footer-bg.jpg") 0 0 no-repeat; */
+    /*background-position:center;*/
+    width:100%;
+    padding: 50px 5% 100px;
     margin-top:100px;
     height:400px;
 }
@@ -90,7 +88,7 @@ footer {
     max-width:1200px;
     width:100%;
     margin:0 auto;
-}    
+}
 .marketing .col-lg-4 p {
     text-align: justify;
 }
@@ -112,11 +110,9 @@ footer {
     color:slategray;
 }
 .carousel-caption {
-    text-shadow:none;    
+    text-shadow:none;
 }
-.carousel-indicators {
-    display:none;
-}
+
 .carousel-caption.slide {
     padding:1% 30% 1% 1%;
     text-align:right;
@@ -127,12 +123,12 @@ footer {
 }
 .carousel-control.right {
     background-image:none;
-} 
+}
 .carousel-control.left {
     background-image:none;
-}    
+}
 .bottom-text {
-    margin-top:60px;    
+    margin-top:60px;
 }
 .carousel-inner>.item>img, .img-responsive {
     max-width:1700px;
@@ -141,92 +137,79 @@ footer {
 }
 .carousel-inner > .item > img {
     width:auto;
-}    
+}
 .footer-block ul li {
     text-decoration:none;
-    display:inline;  
+    display:inline;
     padding-right: 20px;
 }
 .footer-block ul {
-    padding-top: 0px;
+    padding-top: 0;
 }
 a {
-    color:inherit;    
+    color:inherit;
 }
 a:hover {
-    opacity:0.7;    
+    opacity:0.7;
     color:inherit;
 }
 
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
 @media (min-width:320px) and (max-width: 768px) {
-  .footer-block {
-    height:auto;  
-    background-position:left bottom;    
-  }
-  .pull-right {
-    float:left !important;    
-    }   
-  .carousel-caption h1 {
-    font-size: 2.3em;
-    margin-bottom: 0;
+    .footer-block {
+        height: auto;
+        background-position:left bottom;
     }
-  .carousel-caption.slide {
-    padding:0; 
-    text-align:left;
+    .pull-right {
+        float:left !important;
+    }
+    .carousel-caption h1 {
+        font-size: 2.3em;
+        margin-bottom: 0;
+    }
+    .carousel-caption.slide {
+        padding:0;
+        text-align:left;
     }
     .carousel-inner>.item>img, .img-responsive {
         padding-left: 100%;
         margin:0 auto;
     }
 }
-@media (min-width: 1161px) {
-
-
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
 @media (min-width:769px) and (max-width: 1160px) {
-  .carousel-caption h1 {
-    font-size:2.5em;
-  }
-  .carousel-inner>.item>img, .img-responsive {
-    max-width: 1000px;
-    padding-left: 50%;
-    margin:0 auto;
-  }
+    .carousel-caption h1 {
+        font-size:2.5em;
+    }
+    .carousel-inner>.item>img, .img-responsive {
+        max-width: 1000px;
+        padding-left: 50%;
+        margin:0 auto;
+    }
+    .footer-block {
+        height: 500px;
+    }
 }
-
 @media (min-width:1161px) and (max-width: 1500px) {
     .carousel-inner>.item>img, .img-responsive {
         max-width: 1200px;
         padding-left: 50%;
         margin:0 auto;
+    }
+}
+@media (min-width: 1161px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
     }
 }

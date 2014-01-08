@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  color: #5a5a5a;
+    color: #5a5a5a;
 }
 
 
@@ -13,8 +13,8 @@ body {
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: relative;
-  z-index: 15;
+    position: relative;
+    z-index: 15;
 }
 
 
@@ -23,41 +23,41 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 
-  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-  margin-top: -90px;
+    /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    margin-top: -90px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+    z-index: 10;
 }
 
 /* Declare heights because of positioning of request-demo element */
 
 
 .carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
 }
 .carousel-fade .carousel-inner .active {
-  opacity: 1;
+    opacity: 1;
 }
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
 }
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
+    opacity: 1;
 }
 .carousel-fade .carousel-control {
-  z-index: 2;
+    z-index: 2;
 }
 
 /* MARKETING CONTENT
@@ -65,46 +65,31 @@ body {
 
 /* Pad the edges of the mobile views a bit */
 .marketing {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 .marketing h2 {
-  font-weight: normal;
+    font-weight: normal;
 }
 .col-sm-4 .marketing h2:nth-child(3) {
-  margin-bottom:60px;
+    margin-bottom:60px;
 }
 .marketing .col-lg-4 p {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.marketing i .fa {
-  text-align: center;    
-}
+
 .margin-bottom {
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
 }
 
 
 /* Featurettes
 ------------------------- */
 
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
 /* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
 
 
 
