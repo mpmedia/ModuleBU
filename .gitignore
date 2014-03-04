@@ -3,6 +3,9 @@
 .idea/
 *.iml
 
+*.class
+classes/*
+
 .DS_Store
 
 Signal.js
