@@ -2,6 +2,7 @@ package com.example.andoridmvp;
 
 import org.xylem.*;
 
+import tst.Tst;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -13,9 +14,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		initFragment(new PaneFrag01());
+		initFragment(new PaneFrag02());
 		
-
+		new Tst().init();
+		
 	}
 
 	/**
