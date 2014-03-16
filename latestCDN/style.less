@@ -1,0 +1,63 @@
+
+*{box-sizing: border-box;}
+
+@import "media/lato/lato";
+@import "media/src/topcoat-mobile-light";
+@import "media/src/grid";
+@import "lib/leaflet";
+
+body {
+  font-family: "Lato";
+  -webkit-font-smoothing: antialiased;
+}
+
+//////////////////////////////////////////
+//fix to topcoat
+.topcoat-navigation-bar li, .topcoat-navigation-bar li a {
+  display: inline;
+}
+///////////////////////////////////////////
+
+@headerH: 2.375rem;
+
+header {
+  height: @headerH ;
+}
+
+#icon {
+  height: 1rem;
+}
+
+.topcoat-button--cta {
+  height: 2rem;
+  margin-top: -.3rem;
+  line-height: 1rem;
+}
+
+// sider http://codepen.io/jetpacmonkey/pen/ktIJz
+// http://codepen.io/chriscoyier/pen/umEgv
+
+html, body{
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+
+#slider, .sideNav {
+  top: 0;
+  width: 100%;
+  left:  -100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+///  kontainer
+
+#kontainer { // inside content for view inserts
+	//overflow: hidden;
+	min-height:100%;
+	width:100%;
+	margin-top: 5rem;
+}
+
