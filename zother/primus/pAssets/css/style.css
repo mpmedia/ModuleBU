@@ -54,7 +54,7 @@ p {
 }
 .slogan h4 {
     color: slategray;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -109,14 +109,14 @@ p.text-center {
     text-align: justify;
 }
 .carousel .item {
-    height: 350px;
+    height: 400px;
     background-color: lightgray;
 }
 .carousel-inner > .item > img {
-    height: 350px;
+    height: 400px;
 }
 .carousel {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     margin-top: 0;
 }
 .carousel-inner > .item > img {
@@ -130,11 +130,11 @@ p.text-center {
 }
 
 .carousel-caption.slide {
-    padding:1% 35% 0 1%;
-    text-align:right;
+    padding:1% 38% 1% 0;
+    text-align:left;
 }
 .carousel-caption h1 {
-    font-size:2.6em;
+    font-size:2.7em;
     text-shadow: 1px 1px 1px;
 }
 .carousel-control.right {
@@ -144,7 +144,7 @@ p.text-center {
     background-image:none;
 }
 .bottom-text {
-    margin-top:60px;
+    margin-top:80px;
 }
 .carousel-inner>.item>img, .img-responsive {
     max-width:1700px;
