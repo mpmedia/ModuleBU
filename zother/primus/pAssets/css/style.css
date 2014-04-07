@@ -24,6 +24,10 @@ p {
     margin: 0 auto;
     position: relative;
 }
+.headline {
+    text-align: center;
+    padding-bottom: 50px;
+}
 .col-sm-4 {
     text-align: center;
 }
@@ -174,6 +178,7 @@ a:hover {
 }
 .map {
     text-align: center;
+    padding-bottom: 50px;
 }
 
 /* RESPONSIVE CSS
