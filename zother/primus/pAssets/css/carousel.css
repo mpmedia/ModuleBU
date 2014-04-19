@@ -1,29 +1,20 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
 body {
     color: #5a5a5a;
 }
 
-
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
     position: relative;
     z-index: 15;
 }
 
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
 /* Carousel base class */
 .carousel {
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 
     /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     margin-top: -90px;
@@ -32,9 +23,6 @@ body {
 .carousel-caption {
     z-index: 10;
 }
-
-/* Declare heights because of positioning of request-demo element */
-
 
 .carousel-fade .carousel-inner .item {
     opacity: 0;
@@ -62,7 +50,6 @@ body {
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
 /* Pad the edges of the mobile views a bit */
 .marketing {
     padding-left: 15px;
@@ -80,16 +67,3 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
-
-.margin-bottom {
-    margin-bottom: 40px;
-}
-
-
-/* Featurettes
-------------------------- */
-
-/* Thin out the marketing headings */
-
-
-

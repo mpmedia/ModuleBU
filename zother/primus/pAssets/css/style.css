@@ -16,6 +16,7 @@ p {
     width:100%;
     max-width:1200px;
     margin:0 auto;
+    padding-bottom: 15px;
 }
 .centered {
     width: 85%;
@@ -26,9 +27,12 @@ p {
 }
 .headline {
     text-align: center;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    max-width:100%;
 }
 .col-sm-4 {
+    margin-bottom: 30px;
     text-align: center;
 }
 .col-sm-5 {
@@ -51,6 +55,13 @@ p {
 }
 .navbar-brand img {
     width:300px;
+}
+.img-sm {
+    text-align: center;
+    max-width: 165px;
+}
+.bkgrnd {
+    width:100%;
 }
 .slogan {
     padding-left:20px;
@@ -81,9 +92,11 @@ p {
     opacity:0.8;
     background-color: transparent;
 }
+.margin-bottom {
+    margin-bottom: 40px;
+}
 
 footer {
-    /*margin-top:200px;*/
     margin-bottom:100px !important;
     background-color:#999;
     bottom:100px;
@@ -91,11 +104,9 @@ footer {
 .footer-block {
     background-color: lightskyblue;
     /*background-color:#93b7d5;*/
-    /*background:url("/pAssets/request-demo/footer-bg.jpg") 0 0 no-repeat; */
-    /*background-position:center;*/
     width:100%;
     padding: 50px 5% 100px;
-    margin-top:100px;
+    margin-top:30px;
     height:400px;
 }
 .footer-inner {
@@ -120,7 +131,7 @@ p.text-center {
     height: 400px;
 }
 .carousel {
-    margin-bottom: 80px;
+    margin-bottom: 15px;
     margin-top: 0;
 }
 .carousel-inner > .item > img {
@@ -148,7 +159,10 @@ p.text-center {
     background-image:none;
 }
 .bottom-text {
-    margin-top:80px;
+    margin-top:20px;
+}
+.bttn-margin {
+    margin:20px 0;
 }
 .carousel-inner>.item>img, .img-responsive {
     max-width:1700px;
@@ -175,10 +189,6 @@ a {
 a:hover {
     opacity:0.7;
     color:inherit;
-}
-.map {
-    text-align: center;
-    padding-bottom: 50px;
 }
 
 /* RESPONSIVE CSS
@@ -212,6 +222,9 @@ a:hover {
     p.text-center {
         position: relative;
         bottom: 0;
+    }
+    .bottom-text {
+        margin-top:0;
     }
 }
 @media (min-width:769px) and (max-width: 1160px) {
