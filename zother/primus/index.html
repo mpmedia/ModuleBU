@@ -12,14 +12,13 @@
 
     <!--CSS-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" >
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="pAssets/css/carousel.css" rel="stylesheet">
     <link href="pAssets/css/justified-nav.css" rel="stylesheet">
     <link href="pAssets/css/style.css" rel="stylesheet">
-
-    <style type="text/css"></style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style>
 </head>
 <body>
+
 <div class="container masthead">
     <a class="navbar-brand" href="http://apakau.com"><img src="pAssets/img/Logo.png" alt=""></a>
     <ul class="nav nav-justified">
@@ -31,10 +30,9 @@
         <li><a href="http://a.apakau.com/signup">Sign Up</a></li>
     </ul>
 </div>
-<div class="container jumbotron">
-    <h1>Real-time Data Delivery Network</h1>
-    <p class="lead">For Maximum Uptime & Lowest Latency Of Enterprise Web & Mobile Applications.</p>
-    <p><a class="btn btn-lg btn-success" href="http://a.apakau.com/signup" target="_blank" role="button">Try it today</a></p>
+
+<div>
+    <p/>
 </div>
 
 <div id="myCarousel" class="carousel slide carousel-fade">
@@ -67,6 +65,13 @@
     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
+
+<div class="container jumbotron">
+    <h1>Real-time Data Delivery Network</h1>
+    <p class="lead">For Maximum Uptime & Lowest Latency Of Enterprise Web & Mobile Applications.</p>
+    <p><a class="btn btn-lg btn-success" href="http://a.apakau.com/signup" target="_blank" role="button">Try it today</a></p>
+</div>
+
 <!--Wrap the rest of the page in a container my-container to center content-->
 <div class="container jumbotron">
     <div class="row">
@@ -82,7 +87,8 @@
         </div>
         <div class="col-sm-4">
             <h2 class="margin-bottom">Demo Enterprise 2014</h2>
-            <iframe width="213" height="120" src="//www.youtube.com/embed/lWpOiLGA0fU?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="213" height="120"
+                    src="//www.youtube.com/embed/lWpOiLGA0fU?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </div>
@@ -155,12 +161,12 @@
 </div>
 
 <!-- Bootstrap core JS-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 <script type='text/javascript'>
     $(document).ready(function() {
         $('.carousel').carousel({
-            interval: 4000
+            interval: 2500
         })
     });
 </script>
